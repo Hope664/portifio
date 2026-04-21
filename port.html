@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>IMPANO Hope · Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --black:#0a0a0a;
+  --black2:#141414;
+  --black3:#1e1e1e;
+  --card-dark:#111111;
+  --white:#ffffff;
+  --offwhite:#f5f5f5;
+  --gray:#e8e8e8;
+  --gray2:#c4c4c4;
+  --gray3:#888888;
+  --gray4:#444444;
+  --accent:#ffffff;
+  --radius:20px;
+  --radius-sm:12px;
+  --radius-xs:8px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--offwhite);
+  color:var(--black);
+  min-height:100vh;
+}
+
+/* ── NAV ── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(245,245,245,.88);
+  backdrop-filter:blur(16px);
+  padding:14px 32px;
+  display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+.nav-logo{
+  font-family:'DM Mono',monospace;font-size:13px;font-weight:500;color:var(--black);
+  display:flex;align-items:center;gap:8px;text-decoration:none;
+}
+.nav-logo-dot{width:8px;height:8px;border-radius:50%;background:var(--black)}
+.nav-links{display:flex;gap:4px;align-items:center}
+.nav-link{
+  font-size:13px;font-weight:500;color:var(--gray3);
+  text-decoration:none;padding:7px 14px;border-radius:100px;
+  transition:background .18s,color .18s;
+  border:none;background:none;cursor:pointer;font-family:'DM Sans',sans-serif;
+}
+.nav-link:hover{background:rgba(0,0,0,.06);color:var(--black)}
+.nav-cta{
+  font-size:13px;font-weight:600;color:var(--white);
+  background:var(--black);border:none;padding:8px 20px;border-radius:100px;
+  cursor:pointer;font-family:'DM Sans',sans-serif;transition:opacity .18s;text-decoration:none;
+  display:inline-flex;align-items:center;
+}
+.nav-cta:hover{opacity:.8}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;
+  display:grid;grid-template-columns:1fr 360px;
+  align-items:center;
+  padding:100px 40px 60px;
+  gap:40px;
+  max-width:1100px;margin:0 auto;
+}
+.hero-left{}
+.hero-top-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--black);color:var(--white);
+  padding:6px 16px;border-radius:100px;font-size:12px;font-weight:600;
+  font-family:'DM Mono',monospace;letter-spacing:.5px;margin-bottom:28px;
+}
+.pulse{width:7px;height:7px;border-radius:50%;background:#4ade80;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.hero-name{
+  font-family:'Playfair Display',serif;
+  font-size:72px;font-weight:900;line-height:1;
+  letter-spacing:-2px;margin-bottom:6px;color:var(--black);
+}
+.hero-name .dim{color:var(--gray2)}
+.hero-subtitle{
+  font-size:17px;font-weight:500;color:var(--gray3);
+  margin-bottom:28px;font-family:'DM Mono',monospace;
+}
+.hero-desc{
+  font-size:16px;color:var(--gray4);line-height:1.8;
+  max-width:480px;margin-bottom:36px;font-weight:400;
+}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-dark{
+  background:var(--black);color:var(--white);
+  border:none;padding:13px 28px;border-radius:100px;
+  font-size:14px;font-weight:600;cursor:pointer;
+  font-family:'DM Sans',sans-serif;text-decoration:none;
+  display:inline-flex;align-items:center;gap:8px;transition:opacity .2s;
+}
+.btn-dark:hover{opacity:.8}
+.btn-outline{
+  background:transparent;color:var(--black);
+  border:1.5px solid rgba(0,0,0,.2);padding:13px 28px;border-radius:100px;
+  font-size:14px;font-weight:600;cursor:pointer;
+  font-family:'DM Sans',sans-serif;text-decoration:none;
+  display:inline-flex;align-items:center;gap:8px;transition:border-color .2s,background .2s;
+}
+.btn-outline:hover{border-color:var(--black);background:rgba(0,0,0,.04)}
+.hero-stats{
+  display:flex;gap:0;margin-top:52px;
+  border-top:1px solid rgba(0,0,0,.1);padding-top:36px;
+}
+.stat{flex:1;padding-right:28px;border-right:1px solid rgba(0,0,0,.1)}
+.stat:last-child{border-right:none;padding-right:0;padding-left:28px}
+.stat:nth-child(2){padding-left:28px}
+.stat-num{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--black)}
+.stat-label{font-size:12px;color:var(--gray3);margin-top:4px;font-weight:500}
+
+/* ── HERO RIGHT — phone mockup ── */
+.hero-right{position:relative}
+.phone-frame{
+  background:var(--white);
+  border-radius:36px;
+  padding:24px;
+  box-shadow:0 32px 80px rgba(0,0,0,.12),0 0 0 1px rgba(0,0,0,.06);
+  position:relative;overflow:hidden;
+}
+.phone-notch{
+  width:90px;height:26px;background:var(--black);border-radius:100px;
+  margin:0 auto 20px;display:flex;align-items:center;justify-content:center;
+}
+.phone-notch-cam{width:8px;height:8px;border-radius:50%;background:#333}
+.phone-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.phone-greeting{font-size:13px;color:var(--gray3);font-weight:500}
+.phone-name{font-size:20px;font-weight:700;color:var(--black);font-family:'Playfair Display',serif}
+.phone-avatar{width:38px;height:38px;border-radius:50%;background:var(--black);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--white);font-family:'DM Mono',monospace}
+.phone-icons{display:flex;gap:8px;margin-bottom:0}
+.ph-notif{width:34px;height:34px;border-radius:50%;background:var(--offwhite);display:flex;align-items:center;justify-content:center;font-size:14px}
+
+/* dark card */
+.dark-card{
+  background:var(--black);
+  border-radius:var(--radius-sm);
+  padding:18px 20px;color:var(--white);
+  margin-bottom:12px;position:relative;overflow:hidden;
+}
+.dark-card::before{
+  content:'';position:absolute;top:-30px;right:-30px;
+  width:120px;height:120px;border-radius:50%;
+  background:rgba(255,255,255,.04);
+}
+.dark-card::after{
+  content:'';position:absolute;bottom:-20px;right:10px;
+  width:80px;height:80px;border-radius:50%;
+  background:rgba(255,255,255,.03);
+}
+.dc-label{font-size:11px;color:rgba(255,255,255,.5);font-family:'DM Mono',monospace;margin-bottom:4px;letter-spacing:.5px}
+.dc-amount{font-size:26px;font-weight:700;color:var(--white);font-family:'Playfair Display',serif}
+.dc-sub{font-size:11px;color:rgba(255,255,255,.4);margin-top:2px;font-family:'DM Mono',monospace}
+.dc-badge{
+  position:absolute;top:18px;right:18px;
+  background:rgba(255,255,255,.12);border-radius:100px;
+  padding:4px 10px;font-size:10px;color:rgba(255,255,255,.7);font-weight:600;
+}
+.dc-row{display:flex;justify-content:space-between;align-items:flex-end;margin-top:12px}
+.dc-chip{background:rgba(255,255,255,.1);border-radius:6px;padding:4px 10px;font-size:10px;color:rgba(255,255,255,.6);font-family:'DM Mono',monospace}
+
+.skill-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.skill-chip{
+  background:var(--offwhite);border:1px solid var(--gray);
+  border-radius:100px;padding:5px 12px;font-size:11px;font-weight:600;color:var(--black);
+}
+.skill-chip.dark{background:var(--black);color:var(--white);border-color:var(--black)}
+
+/* ── SECTION WRAPPER ── */
+.section{padding:80px 40px;max-width:1100px;margin:0 auto}
+.section-full{padding:80px 0;background:var(--white)}
+.section-full .inner{max-width:1100px;margin:0 auto;padding:0 40px}
+.section-dark{background:var(--black);padding:80px 0}
+.section-dark .inner{max-width:1100px;margin:0 auto;padding:0 40px}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'DM Mono',monospace;font-size:11px;font-weight:500;
+  color:var(--gray3);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;
+}
+.eyebrow-line{width:28px;height:1.5px;background:var(--gray3)}
+.sec-title{font-family:'Playfair Display',serif;font-size:44px;font-weight:900;line-height:1.05;letter-spacing:-1.5px;margin-bottom:14px;color:var(--black)}
+.sec-title.light{color:var(--white)}
+.sec-sub{font-size:16px;color:var(--gray3);line-height:1.7;max-width:500px;margin-bottom:48px;font-weight:400}
+.sec-sub.light{color:rgba(255,255,255,.5)}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.about-story{font-size:15px;color:var(--gray4);line-height:1.9;font-weight:400;margin-bottom:20px}
+.about-card{
+  background:var(--black);border-radius:var(--radius);
+  padding:28px;color:var(--white);
+}
+.about-card-title{font-size:12px;color:rgba(255,255,255,.4);font-family:'DM Mono',monospace;letter-spacing:1px;margin-bottom:16px}
+.fact-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.fact-row:last-child{border-bottom:none}
+.fact-k{font-size:12px;color:rgba(255,255,255,.4);font-weight:500}
+.fact-v{font-size:13px;color:var(--white);font-weight:600}
+.fact-v.green{color:#4ade80}
+
+/* ── SKILLS ── */
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.skill-card{
+  background:var(--white);border:1px solid var(--gray);
+  border-radius:var(--radius-sm);padding:20px;
+  transition:box-shadow .2s,transform .2s;
+}
+.skill-card:hover{box-shadow:0 8px 32px rgba(0,0,0,.1);transform:translateY(-2px)}
+.skill-card.dark-sk{background:var(--black);border-color:var(--black)}
+.skill-cat{font-size:11px;font-weight:600;color:var(--gray3);letter-spacing:1px;font-family:'DM Mono',monospace;margin-bottom:12px}
+.skill-cat.light{color:rgba(255,255,255,.4)}
+.skill-list{display:flex;flex-direction:column;gap:8px}
+.skill-item{display:flex;align-items:center;justify-content:space-between}
+.skill-name{font-size:13px;font-weight:600;color:var(--black)}
+.skill-name.light{color:var(--white)}
+.skill-bar-wrap{width:80px;height:4px;background:rgba(0,0,0,.08);border-radius:2px}
+.skill-bar-wrap.light{background:rgba(255,255,255,.1)}
+.skill-bar{height:4px;border-radius:2px;background:var(--black)}
+.skill-bar.light{background:var(--white)}
+
+/* ── PROJECTS ── */
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.proj-card{
+  background:var(--white);border:1px solid var(--gray);
+  border-radius:var(--radius);overflow:hidden;
+  transition:box-shadow .22s,transform .2s;
+}
+.proj-card:hover{box-shadow:0 16px 48px rgba(0,0,0,.1);transform:translateY(-4px)}
+.proj-card.featured{
+  grid-column:1/-1;
+  display:grid;grid-template-columns:1fr 1fr;
+}
+.proj-img{
+  height:180px;background:var(--black);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.proj-img.featured-img{height:100%;min-height:240px}
+.proj-img-rings{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+}
+.ring{
+  position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.08);
+}
+.proj-img-icon{
+  width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.12);
+  display:flex;align-items:center;justify-content:center;font-size:22px;
+  position:relative;z-index:1;border:1px solid rgba(255,255,255,.15);
+}
+.proj-body{padding:22px}
+.proj-num{font-family:'DM Mono',monospace;font-size:11px;color:var(--gray3);letter-spacing:1px;margin-bottom:8px}
+.proj-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--black);margin-bottom:8px}
+.proj-desc{font-size:13px;color:var(--gray3);line-height:1.7;margin-bottom:16px;font-weight:400}
+.proj-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.ptag{background:var(--offwhite);border:1px solid var(--gray);border-radius:100px;padding:4px 10px;font-size:11px;font-weight:600;color:var(--black)}
+.proj-impact{
+  background:var(--offwhite);border-radius:var(--radius-xs);
+  padding:10px 14px;display:flex;align-items:center;gap:8px;margin-bottom:16px;
+}
+.impact-dot{width:6px;height:6px;border-radius:50%;background:var(--black);flex-shrink:0}
+.impact-text{font-size:12px;font-weight:600;color:var(--black)}
+.proj-links{display:flex;gap:10px}
+.proj-link{
+  font-size:12px;font-weight:600;color:var(--gray3);text-decoration:none;
+  display:flex;align-items:center;gap:5px;
+  padding:7px 14px;border-radius:100px;border:1.5px solid var(--gray);
+  transition:border-color .18s,color .18s,background .18s;
+}
+.proj-link:hover{border-color:var(--black);color:var(--black);background:rgba(0,0,0,.03)}
+.proj-link svg{width:12px;height:12px}
+
+/* ── EXPERIENCE ── */
+.exp-list{display:flex;flex-direction:column;gap:0}
+.exp-item{
+  display:grid;grid-template-columns:140px 1fr;gap:28px;
+  padding:28px 0;border-top:1px solid rgba(0,0,0,.08);
+}
+.exp-date{font-size:11px;color:var(--gray3);font-family:'DM Mono',monospace;padding-top:3px}
+.exp-role{font-size:16px;font-weight:700;color:var(--black);margin-bottom:4px}
+.exp-org{font-size:13px;color:var(--gray3);font-weight:600;margin-bottom:10px}
+.exp-detail{font-size:13px;color:var(--gray4);line-height:1.75;font-weight:400}
+
+/* ── CONTACT ── */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.contact-card{
+  background:var(--offwhite);border:1px solid var(--gray);
+  border-radius:var(--radius);padding:28px;
+}
+.social-links{display:flex;flex-direction:column;gap:10px;margin-top:0}
+.social-link{
+  display:flex;align-items:center;gap:14px;
+  background:var(--white);border:1px solid var(--gray);
+  border-radius:var(--radius-sm);padding:14px 18px;
+  text-decoration:none;color:var(--black);
+  transition:box-shadow .18s,transform .18s;
+}
+.social-link:hover{box-shadow:0 4px 20px rgba(0,0,0,.1);transform:translateY(-1px)}
+.social-icon{
+  width:38px;height:38px;border-radius:var(--radius-xs);
+  background:var(--black);display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.social-icon svg{width:18px;height:18px;fill:var(--white)}
+.social-label{font-size:13px;font-weight:700;color:var(--black)}
+.social-handle{font-size:11px;color:var(--gray3);font-family:'DM Mono',monospace;margin-top:1px}
+.social-arrow{margin-left:auto;font-size:14px;color:var(--gray2)}
+
+.form-group{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.form-label{font-size:11px;font-weight:600;color:var(--gray3);letter-spacing:.5px;font-family:'DM Mono',monospace}
+.form-input{
+  background:var(--white);border:1.5px solid var(--gray);
+  border-radius:var(--radius-xs);padding:11px 14px;
+  font-size:14px;font-family:'DM Sans',sans-serif;color:var(--black);outline:none;
+  transition:border-color .18s;
+}
+.form-input:focus{border-color:var(--black)}
+.form-ta{height:90px;resize:none}
+.form-btn{
+  background:var(--black);color:var(--white);
+  border:none;padding:14px;border-radius:var(--radius-xs);
+  font-size:14px;font-weight:600;cursor:pointer;
+  font-family:'DM Sans',sans-serif;width:100%;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  transition:opacity .18s;
+}
+.form-btn:hover{opacity:.85}
+
+/* ── FOOTER ── */
+.footer{
+  background:var(--black);padding:36px 40px;
+  display:flex;align-items:center;justify-content:space-between;
+  border-top:1px solid rgba(255,255,255,.06);
+}
+.footer-copy{font-size:12px;color:rgba(255,255,255,.3);font-family:'DM Mono',monospace}
+.footer-links{display:flex;gap:16px}
+.footer-link{font-size:12px;color:rgba(255,255,255,.4);text-decoration:none;transition:color .18s}
+.footer-link:hover{color:var(--white)}
+
+/* ── DIVIDER LINE ── */
+.divider{height:1px;background:rgba(0,0,0,.07);margin:0 40px}
+
+/* ── WHY ME STRIP ── */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);border-radius:var(--radius);overflow:hidden}
+.why-item{background:var(--black2);padding:32px 24px;text-align:left}
+.why-num{font-family:'Playfair Display',serif;font-size:40px;font-weight:900;color:rgba(255,255,255,.12);margin-bottom:12px}
+.why-title{font-size:15px;font-weight:700;color:var(--white);margin-bottom:8px}
+.why-text{font-size:13px;color:rgba(255,255,255,.45);line-height:1.65}
+
+/* ── ANIMATIONS ── */
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr;padding:90px 20px 40px}
+  .hero-right{display:none}
+  .about-grid,.skills-grid,.proj-grid,.contact-grid{grid-template-columns:1fr}
+  .proj-card.featured{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .hero-name{font-size:48px}
+  .sec-title{font-size:32px}
+  .section{padding:60px 20px}
+  .section-full .inner,.section-dark .inner{padding:0 20px}
+  .nav{padding:12px 20px}
+  .footer{flex-direction:column;gap:16px;text-align:center;padding:28px 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav-logo" href="#hero">
+    <div class="nav-logo-dot"></div>
+    IMPANO.dev
+  </a>
+  <div class="nav-links">
+    <button class="nav-link" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">About</button>
+    <button class="nav-link" onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth'})">Skills</button>
+    <button class="nav-link" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">Projects</button>
+    <button class="nav-link" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact</button>
+    <a class="nav-cta" href="mailto:umuhozahope5@gmail.com">Hire Me ↗</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+<div class="hero">
+  <div class="hero-left fade-up">
+    <div class="hero-top-tag">
+      <div class="pulse"></div>
+      AVAILABLE FOR OPPORTUNITIES
+    </div>
+    <h1 class="hero-name">
+      IMPANO<br>
+      <span class="dim">Umuhoza</span><br>
+      Hope.
+    </h1>
+    <p class="hero-subtitle">Software Developer · Analytics Engineer</p>
+    <p class="hero-desc">I build real, working software that solves real problems — from IoT crop intelligence for Rwandan farmers to business tools my parents use daily. Based in Kigali, studying at Rwanda Coding Academy.</p>
+    <div class="hero-btns">
+      <a class="btn-dark" href="#projects">View my work ↓</a>
+      <a class="btn-outline" href="https://github.com/Hope664" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">3+</div>
+        <div class="stat-label">Languages spoken in code</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">70%+</div>
+        <div class="stat-label">AgriSense accuracy</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">2028</div>
+        <div class="stat-label">RCA graduation</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right fade-up" style="transition-delay:.15s">
+    <div class="phone-frame">
+      <div class="phone-notch"><div class="phone-notch-cam"></div></div>
+      <div class="phone-header">
+        <div>
+          <div class="phone-greeting">Hello</div>
+          <div class="phone-name">Hope</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <div class="ph-notif">🔔</div>
+          <div class="phone-avatar">IH</div>
+        </div>
+      </div>
+
+      <!-- Profile dark card -->
+      <div class="dark-card">
+        <div class="dc-badge">RCA · 2028</div>
+        <div class="dc-label">CURRENT STATUS</div>
+        <div class="dc-amount">Building.</div>
+        <div class="dc-sub">Kigali, Rwanda · Open to work</div>
+        <div class="dc-row">
+          <div class="dc-chip">Full-stack</div>
+          <div class="dc-chip">Analytics</div>
+          <div class="dc-chip">IoT</div>
+        </div>
+      </div>
+
+      <div style="font-size:12px;color:var(--gray3);font-weight:600;margin-bottom:10px;margin-top:4px;font-family:'DM Mono',monospace;letter-spacing:.5px">SKILL STACK</div>
+      <div class="skill-chips">
+        <span class="skill-chip dark">React</span>
+        <span class="skill-chip dark">JavaScript</span>
+        <span class="skill-chip">PHP</span>
+        <span class="skill-chip">MySQL</span>
+        <span class="skill-chip dark">Express.js</span>
+        <span class="skill-chip">Django</span>
+        <span class="skill-chip">IoT</span>
+        <span class="skill-chip dark">Figma</span>
+        <span class="skill-chip">Linux</span>
+        <span class="skill-chip">MongoDB</span>
+      </div>
+
+      <div style="margin-top:14px;background:var(--offwhite);border-radius:var(--radius-xs);padding:10px 14px;display:flex;align-items:center;justify-content:space-between">
+        <span style="font-size:12px;font-weight:600;color:var(--black)">github.com/Hope664</span>
+        <span style="font-size:12px;color:var(--gray3)">↗</span>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<div class="section-full">
+<div class="inner">
+<section id="about" class="section" style="padding:80px 0">
+  <div class="eyebrow"><div class="eyebrow-line"></div>01 · ABOUT ME</div>
+  <h2 class="sec-title">The person behind<br>the code.</h2>
+  <div class="about-grid">
+    <div class="fade-up">
+      <p class="about-story">In 2025, I watched my parents struggle — manual ledgers, forgotten debts, zero visibility into their business finances. Instead of accepting that as normal, I built them a solution. That was my first real project, and it changed how I think about software: <strong>it must solve real problems for real people.</strong></p>
+      <p class="about-story">Now I'm at Rwanda Coding Academy — one of East Africa's most selective tech institutions — studying Software Programming and Embedded Systems. I've since built AgriSense, an IoT-powered crop recommendation platform that achieved 70%+ accuracy on its first deployment.</p>
+      <p class="about-story">My long-term ambition is to merge software engineering with avionics — building the systems that will power Rwanda's aviation future. Until then, I'm shipping code, building my portfolio, and looking for my next challenge.</p>
+      <div style="display:flex;gap:10px;margin-top:20px;flex-wrap:wrap">
+        <a class="btn-dark" href="https://github.com/Hope664" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn-outline" href="mailto:umuhozahope5@gmail.com">Email me</a>
+      </div>
+    </div>
+    <div class="about-card fade-up" style="transition-delay:.12s">
+      <div class="about-card-title">PROFILE</div>
+      <div class="fact-row"><span class="fact-k">Name</span><span class="fact-v">IMPANO Umuhoza Hope</span></div>
+      <div class="fact-row"><span class="fact-k">Location</span><span class="fact-v">Kigali, Rwanda</span></div>
+      <div class="fact-row"><span class="fact-k">School</span><span class="fact-v">Rwanda Coding Academy</span></div>
+      <div class="fact-row"><span class="fact-k">Major</span><span class="fact-v">Software & Embedded Systems</span></div>
+      <div class="fact-row"><span class="fact-k">Year</span><span class="fact-v">S4 (L3) · Grad 2028</span></div>
+      <div class="fact-row"><span class="fact-k">Email</span><span class="fact-v" style="font-size:11px">umuhozahope5@gmail.com</span></div>
+      <div class="fact-row"><span class="fact-k">Status</span><span class="fact-v green">● Open to work</span></div>
+      <div class="fact-row"><span class="fact-k">Looking for</span><span class="fact-v" style="font-size:11px">Freelance · Internship · Competitions</span></div>
+    </div>
+  </div>
+</section>
+</div>
+</div>
+
+<!-- SKILLS -->
+<section id="skills" class="section-dark">
+<div class="inner">
+  <div style="padding:80px 0">
+  <div class="eyebrow" style="color:rgba(255,255,255,.35)"><div class="eyebrow-line" style="background:rgba(255,255,255,.25)"></div>02 · SKILLS</div>
+  <h2 class="sec-title light">What I know<br>& what I'm building.</h2>
+  <p class="sec-sub light">A full-stack developer with depth across the entire product lifecycle — frontend interfaces to IoT data pipelines.</p>
+  <div class="skills-grid fade-up">
+    <div class="skill-card dark-sk">
+      <div class="skill-cat light">FRONTEND</div>
+      <div class="skill-list">
+        <div class="skill-item"><span class="skill-name light">React.js</span><div class="skill-bar-wrap light"><div class="skill-bar light" style="width:90%"></div></div></div>
+        <div class="skill-item"><span class="skill-name light">JavaScript</span><div class="skill-bar-wrap light"><div class="skill-bar light" style="width:90%"></div></div></div>
+        <div class="skill-item"><span class="skill-name light">HTML / CSS</span><div class="skill-bar-wrap light"><div class="skill-bar light" style="width:95%"></div></div></div>
+        <div class="skill-item"><span class="skill-name light">Figma / UI Design</span><div class="skill-bar-wrap light"><div class="skill-bar light" style="width:75%"></div></div></div>
+        <div class="skill-item"><span class="skill-name light">Responsive Design</span><div class="skill-bar-wrap light"><div class="skill-bar light" style="width:88%"></div></div></div>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">BACKEND</div>
+      <div class="skill-list">
+        <div class="skill-item"><span class="skill-name">Node.js / Express</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:88%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">PHP</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Python / Django</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:80%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">REST API Design</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:85%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">C Programming</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:82%"></div></div></div>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">DATABASE & DEVOPS</div>
+      <div class="skill-list">
+        <div class="skill-item"><span class="skill-name">MySQL</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:92%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">MongoDB</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:80%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Git & GitHub</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:88%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Linux CLI</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:78%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Vercel · Postman</span><div class="skill-bar-wrap"><div class="skill-bar" style="width:82%"></div></div></div>
+      </div>
+    </div>
+    <div class="skill-card dark-sk">
+      <div class="skill-cat light">IOT & SECURITY</div>
+      <div class="skill-list">
+        <div class="skill-item"><span class="skill-name light">Sensor Integration</span><div class="skill-bar-wrap light"><div class="skill-bar light" style="width:80%"></div></div></div>
+        <div class="skill-item"><span class="skill-name light">Real-time Pipelines</span><div class="skill-bar-wrap light"><div class="skill-bar light" style="width:75%"></div></div></div>
+        <div class="skill-item"><span class="skill-name light">Cybersecurity Basics</span><div class="skill-bar-wrap light"><div class="skill-bar light" style="width:72%"></div></div></div>
+        <div class="skill-item"><span class="skill-name light">Networking</span><div class="skill-bar-wrap light"><div class="skill-bar light" style="width:70%"></div></div></div>
+        <div class="skill-item"><span class="skill-name light">Embedded Systems</span><div class="skill-bar-wrap light"><div class="skill-bar light" style="width:68%"></div></div></div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<div class="section-full">
+<div class="inner">
+<section id="projects" class="section" style="padding:80px 0">
+  <div class="eyebrow"><div class="eyebrow-line"></div>03 · PROJECTS</div>
+  <h2 class="sec-title">Things I've built<br>that actually work.</h2>
+  <p class="sec-sub">Every project here solves a problem someone actually has — not a tutorial clone, not a demo. Real tools for real people.</p>
+
+  <div class="proj-grid">
+
+    <!-- Featured project -->
+    <div class="proj-card featured fade-up">
+      <div class="proj-img featured-img">
+        <div class="proj-img-rings">
+          <div class="ring" style="width:60px;height:60px"></div>
+          <div class="ring" style="width:110px;height:110px"></div>
+          <div class="ring" style="width:170px;height:170px"></div>
+          <div class="ring" style="width:240px;height:240px"></div>
+          <div class="ring" style="width:320px;height:320px"></div>
+        </div>
+        <div class="proj-img-icon">🌱</div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-num">#01 · FEATURED PROJECT</div>
+        <div class="proj-title">AgriSense</div>
+        <p class="proj-desc">IoT-powered crop recommendation system for Rwandan farmers. Eliminates guesswork by combining real-time soil sensor data with location intelligence to predict the best crops and reduce wasted farm inputs.</p>
+        <div class="proj-tags">
+          <span class="ptag">React</span><span class="ptag">IoT Sensors</span><span class="ptag">REST APIs</span>
+          <span class="ptag">Python</span><span class="ptag">MySQL</span>
+        </div>
+        <div class="proj-impact">
+          <div class="impact-dot"></div>
+          <span class="impact-text">70%+ prediction accuracy on first deployment · FAO validated</span>
+        </div>
+        <div class="proj-links">
+          <a class="proj-link" href="https://github.com/Hope664" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a class="proj-link" href="mailto:umuhozahope5@gmail.com">Request demo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="proj-card fade-up" style="transition-delay:.1s">
+      <div class="proj-img">
+        <div class="proj-img-rings">
+          <div class="ring" style="width:60px;height:60px"></div>
+          <div class="ring" style="width:120px;height:120px"></div>
+          <div class="ring" style="width:200px;height:200px"></div>
+        </div>
+        <div class="proj-img-icon">📊</div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-num">#02</div>
+        <div class="proj-title">Business Record System</div>
+        <p class="proj-desc">A full-stack business management tool built for my parents' small business. Tracks clients, debts, payments, and inventory — replacing paper ledgers with a clean, simple interface anyone can use.</p>
+        <div class="proj-tags">
+          <span class="ptag">PHP</span><span class="ptag">MySQL</span><span class="ptag">JavaScript</span><span class="ptag">HTML/CSS</span>
+        </div>
+        <div class="proj-impact">
+          <div class="impact-dot"></div>
+          <span class="impact-text">Eliminated lost records · Used by a real business daily</span>
+        </div>
+        <div class="proj-links">
+          <a class="proj-link" href="https://github.com/Hope664" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 — add more -->
+    <div class="proj-card fade-up" style="transition-delay:.2s;border-style:dashed;display:flex;align-items:center;justify-content:center;min-height:280px;flex-direction:column;gap:10px;cursor:default">
+      <div style="font-size:28px">⚙️</div>
+      <div style="font-size:14px;font-weight:700;color:var(--black)">More projects incoming</div>
+      <div style="font-size:12px;color:var(--gray3);text-align:center;max-width:200px;line-height:1.6">Currently building — check GitHub for the latest</div>
+      <a class="btn-dark" href="https://github.com/Hope664" target="_blank" rel="noopener" style="margin-top:6px;font-size:12px;padding:9px 18px">github.com/Hope664 ↗</a>
+    </div>
+
+  </div>
+</section>
+</div>
+</div>
+
+<!-- WHY ME -->
+<section class="section-dark">
+<div class="inner" style="padding:80px 0">
+  <div class="eyebrow" style="color:rgba(255,255,255,.35)"><div class="eyebrow-line" style="background:rgba(255,255,255,.25)"></div>04 · WHY WORK WITH ME</div>
+  <h2 class="sec-title light" style="margin-bottom:40px">Four reasons I'm<br>different.</h2>
+  <div class="why-grid fade-up">
+    <div class="why-item">
+      <div class="why-num">01</div>
+      <div class="why-title">I build for real users</div>
+      <div class="why-text">My first client was my own family. I iterated until non-technical users could use it without help. That is my quality standard on every project.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-num">02</div>
+      <div class="why-title">I deliver measurable results</div>
+      <div class="why-text">AgriSense achieved 70%+ accuracy on first deployment — validated by FAO. I hold myself to production standards, not just demo standards.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-num">03</div>
+      <div class="why-title">I am self-driven</div>
+      <div class="why-text">Nobody assigned me to build my parents' system. I saw a problem and shipped a solution. Self-direction is how I operate by default.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-num">04</div>
+      <div class="why-title">I code with purpose</div>
+      <div class="why-text">My goal is to use software to advance Rwanda's aviation sector. Every line of code I write moves me closer to that mission.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<div class="section-full">
+<div class="inner">
+<section id="experience" class="section" style="padding:80px 0">
+  <div class="eyebrow"><div class="eyebrow-line"></div>05 · EXPERIENCE</div>
+  <h2 class="sec-title">What I've done<br>so far.</h2>
+  <div class="exp-list fade-up">
+    <div class="exp-item">
+      <div class="exp-date">2025 · Ongoing</div>
+      <div>
+        <div class="exp-role">Analytics Engineer — AgriSense</div>
+        <div class="exp-org">Student Project · Rwanda Coding Academy</div>
+        <div class="exp-detail">Designed and built the data pipeline and crop recommendation engine for AgriSense. Conducted field research with Rwandan farmers, partnered with FAO for validation, and achieved 70%+ prediction accuracy on first deployment.</div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">2025</div>
+      <div>
+        <div class="exp-role">Solo Full-Stack Developer — Business Record System</div>
+        <div class="exp-org">Independent Project</div>
+        <div class="exp-detail">Conceptualised, designed, built, and deployed a complete business management system for a real client (family business). Replaced manual paper ledgers with a clean, digital solution — used daily to track clients, payments, and inventory.</div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">2024 · Present</div>
+      <div>
+        <div class="exp-role">Student Engineer</div>
+        <div class="exp-org">Rwanda Coding Academy · Kigali</div>
+        <div class="exp-detail">Selected through national competitive examination for one of East Africa's most selective tech institutions. Studying Software Programming and Embedded Systems. Curriculum covers full-stack development, IoT, and applied computer science.</div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="section-dark">
+<div class="inner" style="padding:80px 0">
+  <div class="eyebrow" style="color:rgba(255,255,255,.35)"><div class="eyebrow-line" style="background:rgba(255,255,255,.25)"></div>06 · CONTACT</div>
+  <h2 class="sec-title light">Let's build<br>something great.</h2>
+  <p class="sec-sub light" style="margin-bottom:48px">Open to freelance projects, internships, competitions, and interesting conversations. I reply within 24 hours.</p>
+
+  <div class="contact-grid fade-up">
+    <div>
+      <div style="font-size:12px;color:rgba(255,255,255,.35);font-family:'DM Mono',monospace;letter-spacing:1px;margin-bottom:16px">FIND ME HERE</div>
+      <div class="social-links">
+
+        <a class="social-link" href="mailto:umuhozahope5@gmail.com">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <div>
+            <div class="social-label">Email</div>
+            <div class="social-handle">umuhozahope5@gmail.com</div>
+          </div>
+          <span class="social-arrow">↗</span>
+        </a>
+
+        <a class="social-link" href="https://github.com/Hope664" target="_blank" rel="noopener">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </div>
+          <div>
+            <div class="social-label">GitHub</div>
+            <div class="social-handle">github.com/Hope664</div>
+          </div>
+          <span class="social-arrow">↗</span>
+        </a>
+
+        <a class="social-link" href="https://www.linkedin.com/in/impano-umuhoza-hope" target="_blank" rel="noopener">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div>
+            <div class="social-label">LinkedIn</div>
+            <div class="social-handle">impano-umuhoza-hope</div>
+          </div>
+          <span class="social-arrow">↗</span>
+        </a>
+
+      </div>
+    </div>
+
+    <div style="background:var(--black2);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:28px">
+      <div style="font-size:12px;color:rgba(255,255,255,.35);font-family:'DM Mono',monospace;letter-spacing:1px;margin-bottom:20px">SEND A MESSAGE</div>
+      <div class="form-group">
+        <label class="form-label" style="color:rgba(255,255,255,.35)">NAME</label>
+        <input class="form-input" style="background:#1a1a1a;border-color:rgba(255,255,255,.1);color:#fff" placeholder="Your full name"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label" style="color:rgba(255,255,255,.35)">EMAIL</label>
+        <input class="form-input" style="background:#1a1a1a;border-color:rgba(255,255,255,.1);color:#fff" placeholder="your@email.com"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label" style="color:rgba(255,255,255,.35)">MESSAGE</label>
+        <textarea class="form-input form-ta" style="background:#1a1a1a;border-color:rgba(255,255,255,.1);color:#fff" placeholder="Tell me about your project or opportunity..."></textarea>
+      </div>
+      <button class="form-btn" onclick="window.location.href='mailto:umuhozahope5@gmail.com'">Send message →</button>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-copy">© 2025 IMPANO Umuhoza Hope · Kigali, Rwanda</div>
+  <div class="footer-links">
+    <a class="footer-link" href="mailto:umuhozahope5@gmail.com">Email</a>
+    <a class="footer-link" href="https://github.com/Hope664" target="_blank" rel="noopener">GitHub</a>
+    <a class="footer-link" href="https://www.linkedin.com/in/impano-umuhoza-hope" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
