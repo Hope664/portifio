@@ -26,9 +26,7 @@
 html{scroll-behavior:smooth;overflow-x:hidden}
 body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--black);min-height:100vh;cursor:none}
 
-/* ══════════════════════════════
-   CUSTOM CURSOR — smaller & cleaner
-   ══════════════════════════════ */
+
 #cur{
   position:fixed;width:8px;height:8px;border-radius:50%;
   background:#000;pointer-events:none;z-index:9999;
@@ -42,10 +40,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
   transition:left .1s ease,top .1s ease,width .2s,height .2s,opacity .2s,border-color .2s;
 }
 
-/* ── SCROLL PROGRESS ── */
 #sprog{position:fixed;top:0;left:0;height:2px;background:var(--black);z-index:9997;width:0%;transition:width .08s linear}
 
-/* ── NAV ── */
+
 .nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(245,245,245,.9);backdrop-filter:blur(20px);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(0,0,0,.06)}
 .nav-logo{font-family:'DM Mono',monospace;font-size:13px;font-weight:500;color:var(--black);display:flex;align-items:center;gap:8px;text-decoration:none}
 .nav-logo-dot{width:8px;height:8px;border-radius:50%;background:#4ade80;animation:gpulse 2s infinite}
@@ -58,7 +55,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
 .nav-cta{font-size:13px;font-weight:600;color:var(--white);background:var(--black);border:none;padding:8px 20px;border-radius:100px;cursor:none;font-family:'DM Sans',sans-serif;transition:transform .2s,box-shadow .2s;text-decoration:none;display:inline-flex;align-items:center;overflow:hidden;position:relative}
 .nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,.25)}
 
-/* Admin gear — subtle, only visible on hover of nav area */
+
 .admin-gear{
   background:none;border:none;cursor:pointer;
   font-size:13px;color:var(--gray3);
@@ -69,7 +66,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
 .admin-gear:hover{opacity:1;background:rgba(0,0,0,.06);color:var(--black)}
 .admin-gear.active{opacity:1;color:#4ade80}
 
-/* ── HERO ── */
+
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 360px;align-items:center;padding:100px 40px 60px;gap:40px;max-width:1100px;margin:0 auto}
 .hero-top-tag{display:inline-flex;align-items:center;gap:8px;background:var(--black);color:var(--white);padding:6px 16px;border-radius:100px;font-size:12px;font-weight:600;font-family:'DM Mono',monospace;letter-spacing:.5px;margin-bottom:28px;animation:tagIn .8s cubic-bezier(.22,1,.36,1) both}
 @keyframes tagIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
@@ -91,7 +88,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
 .stat-num{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--black)}
 .stat-label{font-size:12px;color:var(--gray3);margin-top:4px;font-weight:500}
 
-/* ── PHONE CARD ── */
+
 .hero-right{position:relative;animation:cardIn 1.1s .3s cubic-bezier(.22,1,.36,1) both}
 @keyframes cardIn{from{opacity:0;transform:translateY(40px) rotate(2deg)}to{opacity:1;transform:none}}
 .phone-frame{background:var(--white);border-radius:36px;padding:24px;box-shadow:0 32px 80px rgba(0,0,0,.12),0 0 0 1px rgba(0,0,0,.06);position:relative;overflow:hidden;animation:float 5s ease-in-out infinite 1.5s}
@@ -116,7 +113,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
 .skill-chip{background:var(--offwhite);border:1px solid var(--gray);border-radius:100px;padding:5px 12px;font-size:11px;font-weight:600;color:var(--black)}
 .skill-chip.dark{background:var(--black);color:var(--white);border-color:var(--black)}
 
-/* ── SECTIONS ── */
+
 .section{padding:80px 40px;max-width:1100px;margin:0 auto}
 .section-full{padding:80px 0;background:var(--white)}
 .section-full .inner{max-width:1100px;margin:0 auto;padding:0 40px}
@@ -130,7 +127,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
 .sec-sub.light{color:rgba(255,255,255,.5)}
 .divider{height:1px;background:rgba(0,0,0,.07);margin:0 40px}
 
-/* ── ABOUT ── */
+
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
 .about-story{font-size:15px;color:var(--gray4);line-height:1.9;font-weight:400;margin-bottom:20px}
 .about-card{background:var(--black);border-radius:var(--radius);padding:28px;color:var(--white)}
@@ -141,7 +138,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
 .fact-v{font-size:13px;color:var(--white);font-weight:600}
 .fact-v.green{color:#4ade80}
 
-/* ── SKILLS ── */
+
 .skills-universe{margin-top:8px;display:flex;flex-direction:column;gap:48px}
 .sk-row{display:flex;align-items:flex-start;gap:0;position:relative}
 .sk-row::before{content:'';position:absolute;left:52px;top:0;bottom:0;width:1px;background:rgba(255,255,255,.06)}
@@ -165,7 +162,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
 .sk-tag-bar-fill{height:100%;border-radius:1px;background:rgba(255,255,255,.5);width:0%;transition:width 1s cubic-bezier(.22,1,.36,1)}
 .sk-tag.pro .sk-tag-bar-fill{background:var(--white)}
 
-/* ── FLIP CARD PROJECTS ── */
 .proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .flip-wrap{perspective:1200px;opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);min-height:400px}
 .flip-wrap.span2{grid-column:1/-1}
@@ -214,15 +210,176 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
 .flip-back-links{display:flex;gap:10px;margin-top:auto}
 .flip-link{font-size:12px;font-weight:600;color:var(--black);background:var(--white);border:none;padding:9px 18px;border-radius:100px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:opacity .2s,transform .2s}
 .flip-link:hover{opacity:.85;transform:translateY(-1px)}
-.flip-link.ghost{background:transparent;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.2)}
-.flip-link.ghost:hover{background:rgba(255,255,255,.08);color:var(--white)}
+.flip-link.figma{
+  background:transparent;color:rgba(255,255,255,.7);
+  border:1px solid rgba(255,255,255,.2);gap:6px;
+}
+.flip-link.figma:hover{background:rgba(255,255,255,.08);color:#fff}
+.flip-link.live{
+  background:#4ade80;color:#000;border:none;
+}
+.flip-link.live:hover{opacity:.88;transform:translateY(-1px)}
 .flip-close{position:absolute;top:16px;right:16px;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.1);border:none;color:rgba(255,255,255,.6);font-size:16px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s;font-family:sans-serif;line-height:1}
 .flip-close:hover{background:rgba(255,255,255,.2);color:var(--white)}
 
-/* dark form inputs */
+#proj-page-overlay{
+  position:fixed;inset:0;z-index:8000;
+  background:var(--offwhite);
+  display:none;
+  overflow-y:auto;
+  transform:translateY(100%);
+  transition:transform .55s cubic-bezier(.22,1,.36,1);
+}
+#proj-page-overlay.open{
+  display:block;
+  transform:translateY(100%);
+}
+#proj-page-overlay.sliding{
+  transform:translateY(0);
+}
+.pp-nav{
+  position:sticky;top:0;z-index:10;
+  background:rgba(245,245,245,.92);backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(0,0,0,.06);
+  padding:14px 40px;display:flex;align-items:center;justify-content:space-between;
+}
+.pp-back{
+  display:inline-flex;align-items:center;gap:10px;
+  background:none;border:none;cursor:pointer;
+  font-size:14px;font-weight:600;color:var(--black);
+  font-family:'DM Sans',sans-serif;padding:8px 0;
+  transition:gap .2s;
+}
+.pp-back:hover{gap:14px}
+.pp-back-arrow{
+  width:32px;height:32px;border-radius:50%;
+  background:var(--black);color:var(--white);
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;transition:transform .2s;
+}
+.pp-back:hover .pp-back-arrow{transform:translateX(-3px)}
+.pp-title-small{
+  font-family:'DM Mono',monospace;font-size:12px;
+  color:var(--gray3);letter-spacing:1px;
+}
+.pp-hero{
+  background:var(--black);padding:80px 40px 64px;
+  position:relative;overflow:hidden;
+}
+.pp-hero-rings{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:flex-end;
+  pointer-events:none;padding-right:80px;
+}
+.pp-hero-ring{
+  position:absolute;border-radius:50%;
+  border:1px solid rgba(255,255,255,.05);
+}
+.pp-hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1;}
+.pp-num{
+  font-family:'DM Mono',monospace;font-size:11px;
+  color:rgba(255,255,255,.3);letter-spacing:2.5px;
+  text-transform:uppercase;margin-bottom:16px;
+}
+.pp-hero-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(48px,7vw,88px);font-weight:900;
+  color:var(--white);line-height:1;letter-spacing:-3px;
+  margin-bottom:20px;
+}
+.pp-hero-desc{
+  font-size:18px;color:rgba(255,255,255,.6);
+  line-height:1.7;max-width:600px;font-weight:400;
+  margin-bottom:32px;
+}
+.pp-tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:40px;}
+.pp-tag{
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);
+  border-radius:100px;padding:6px 14px;
+  font-size:12px;font-weight:600;color:rgba(255,255,255,.8);
+}
+.pp-link-row{display:flex;gap:12px;flex-wrap:wrap;}
+.pp-link{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 24px;border-radius:100px;
+  font-size:13px;font-weight:700;
+  text-decoration:none;transition:transform .2s,opacity .2s;
+  font-family:'DM Sans',sans-serif;
+}
+.pp-link:hover{transform:translateY(-2px);opacity:.88}
+.pp-link.white{background:var(--white);color:var(--black);}
+.pp-link.ghost{background:transparent;color:rgba(255,255,255,.7);border:1.5px solid rgba(255,255,255,.2);}
+.pp-link.green{background:#4ade80;color:#000;}
+.pp-body{max-width:1100px;margin:0 auto;padding:64px 40px;}
+.pp-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px;}
+.pp-card{
+  background:var(--white);border:1px solid var(--gray);
+  border-radius:var(--radius);padding:32px;
+}
+.pp-card.dark{background:var(--black);border-color:var(--black);}
+.pp-card.full{grid-column:1/-1;}
+.pp-card-label{
+  font-family:'DM Mono',monospace;font-size:10px;
+  letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--gray3);margin-bottom:14px;
+  display:flex;align-items:center;gap:8px;
+}
+.pp-card-label::after{
+  content:'';flex:1;height:1px;background:var(--gray);
+}
+.pp-card.dark .pp-card-label{color:rgba(255,255,255,.3);}
+.pp-card.dark .pp-card-label::after{background:rgba(255,255,255,.07);}
+.pp-card-text{
+  font-size:15px;color:var(--gray4);line-height:1.85;font-weight:400;
+}
+.pp-card.dark .pp-card-text{color:rgba(255,255,255,.7);}
+.pp-impact-box{
+  background:var(--black);border-radius:var(--radius);
+  padding:32px;grid-column:1/-1;
+  display:flex;align-items:flex-start;gap:20px;
+}
+.pp-impact-icon{
+  width:44px;height:44px;border-radius:50%;
+  background:rgba(74,222,128,.15);border:1px solid rgba(74,222,128,.3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;flex-shrink:0;margin-top:2px;
+}
+.pp-impact-label{
+  font-family:'DM Mono',monospace;font-size:10px;
+  color:rgba(255,255,255,.35);letter-spacing:2px;
+  text-transform:uppercase;margin-bottom:8px;
+}
+.pp-impact-text{
+  font-size:16px;font-weight:600;color:var(--white);line-height:1.6;
+}
+.pp-stat-row{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--gray);
+  border-radius:var(--radius);overflow:hidden;
+  margin-bottom:24px;grid-column:1/-1;
+}
+.pp-stat{
+  background:var(--white);padding:28px 24px;text-align:center;
+}
+.pp-stat-num{
+  font-family:'Playfair Display',serif;
+  font-size:32px;font-weight:900;color:var(--black);
+  margin-bottom:6px;
+}
+.pp-stat-label{font-size:12px;color:var(--gray3);font-weight:500;}
+@media(max-width:768px){
+  .pp-hero{padding:60px 20px 48px;}
+  .pp-body{padding:40px 20px;}
+  .pp-grid{grid-template-columns:1fr;}
+  .pp-card.full{grid-column:1;}
+  .pp-stat-row{grid-template-columns:1fr;}
+  .pp-nav{padding:12px 20px;}
+  .pp-hero-title{letter-spacing:-1px;}
+  .pp-impact-box{flex-direction:column;gap:14px;}
+}
+
 .dark-input:focus{border-color:rgba(255,255,255,.6)!important;background:#222!important;box-shadow:0 0 0 4px rgba(255,255,255,.08),0 0 28px 4px rgba(255,255,255,.07)!important}
 
-/* ── WHY ME ── */
+
 .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);border-radius:var(--radius);overflow:hidden}
 .why-item{background:var(--black2);padding:32px 24px;opacity:0;transform:translateY(20px);transition:opacity .5s,transform .5s,background .2s}
 .why-item.visible{opacity:1;transform:none}
@@ -231,7 +388,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
 .why-title{font-size:15px;font-weight:700;color:var(--white);margin-bottom:8px}
 .why-text{font-size:13px;color:rgba(255,255,255,.45);line-height:1.65}
 
-/* ── EXPERIENCE ── */
+
 .exp-list{display:flex;flex-direction:column;gap:0}
 .exp-item{display:grid;grid-template-columns:140px 1fr;gap:28px;padding:28px 0;border-top:1px solid rgba(0,0,0,.08);opacity:0;transform:translateX(-16px);transition:opacity .55s,transform .55s}
 .exp-item.visible{opacity:1;transform:none}
@@ -240,7 +397,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
 .exp-org{font-size:13px;color:var(--gray3);font-weight:600;margin-bottom:10px}
 .exp-detail{font-size:13px;color:var(--gray4);line-height:1.75;font-weight:400}
 
-/* ── CONTACT ── */
+
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
 .social-links{display:flex;flex-direction:column;gap:10px}
 .social-link{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-sm);padding:14px 18px;text-decoration:none;color:var(--white);transition:box-shadow .18s,transform .18s,background .18s;opacity:0;transform:translateX(-12px)}
@@ -264,29 +421,27 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
 .form-success-sub{font-size:13px;color:rgba(255,255,255,.5);line-height:1.6;font-family:'DM Mono',monospace}
 .form-error-msg{display:none;font-size:12px;color:#f87171;font-family:'DM Mono',monospace;margin-top:8px;text-align:center;padding:10px;background:rgba(248,113,113,.08);border-radius:8px;border:1px solid rgba(248,113,113,.2)}
 
-/* ── FOOTER ── */
+
 .footer{background:var(--black);padding:36px 40px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,.06)}
 .footer-copy{font-size:12px;color:rgba(255,255,255,.3);font-family:'DM Mono',monospace}
 .footer-links{display:flex;gap:16px}
 .footer-link{font-size:12px;color:rgba(255,255,255,.4);text-decoration:none;transition:color .18s}
 .footer-link:hover{color:var(--white)}
 
-/* ── RIPPLE ── */
+
 .ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,.25);transform:scale(0);animation:rip .55s linear;pointer-events:none}
 @keyframes rip{to{transform:scale(4);opacity:0}}
 .btn-dark .ripple,.form-btn .ripple{background:rgba(255,255,255,.2)}
 .btn-outline .ripple{background:rgba(0,0,0,.08)}
 
-/* ── COUNTER ── */
+
 .stat-num{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--black)}
 
-/* ── GENERAL REVEAL ── */
+
 .fade-up{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
 .fade-up.visible{opacity:1;transform:none}
 
-/* ══════════════════════════════════════════════
-   ADMIN ADD-PROJECT FLOATING BUTTON
-   ══════════════════════════════════════════════ */
+
 #add-proj-fab{
   display:none;
   position:fixed;bottom:32px;right:32px;z-index:400;
@@ -302,9 +457,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
 #add-proj-fab button:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(0,0,0,.4)}
 #add-proj-fab button span.fab-plus{font-size:20px;line-height:1;font-weight:300}
 
-/* ══════════════════════════════════════════════
-   MODAL OVERLAY — shared base for all modals
-   ══════════════════════════════════════════════ */
+
 .modal-overlay{
   display:none;position:fixed;inset:0;z-index:10000;
   background:rgba(0,0,0,.72);backdrop-filter:blur(10px);
@@ -348,17 +501,27 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
 .modal-error{font-size:12px;color:#ef4444;font-family:'DM Mono',monospace;margin-top:6px;display:none}
 .modal-2col{display:grid;grid-template-columns:1fr 80px;gap:12px}
 
-/* Admin delete button on dynamic cards */
-.proj-delete-btn{
+
+.proj-admin-btns{
   position:absolute;top:16px;right:52px;
+  display:flex;gap:6px;z-index:10;
+}
+.proj-delete-btn,.proj-edit-btn{
   width:28px;height:28px;border-radius:50%;
-  background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.35);
-  color:#f87171;font-size:14px;
+  border:none;font-size:13px;
   display:flex;align-items:center;justify-content:center;
-  cursor:pointer;transition:background .2s;
-  z-index:10;
+  cursor:pointer;transition:background .2s;line-height:1;
+}
+.proj-delete-btn{
+  background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.35);
+  color:#f87171;
 }
 .proj-delete-btn:hover{background:rgba(239,68,68,.3);color:#fff}
+.proj-edit-btn{
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);
+  color:rgba(255,255,255,.7);
+}
+.proj-edit-btn:hover{background:rgba(255,255,255,.25);color:#fff}
 
 /* ── RESPONSIVE ── */
 @media(max-width:768px){
@@ -388,7 +551,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
 <div id="cur-ring"></div>
 <div id="sprog"></div>
 
-<!-- NAV -->
 <nav class="nav">
   <a class="nav-logo" href="#hero">
     <div class="nav-logo-dot"></div>
@@ -399,20 +561,16 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
     <button class="nav-link" onclick="go('skills')">Skills</button>
     <button class="nav-link" onclick="go('projects')">Projects</button>
     <button class="nav-link" onclick="go('contact')">Contact</button>
-    <!-- Admin gear: subtle, only you'll notice it -->
+    
     <button class="admin-gear" id="admin-gear-btn" onclick="openAdminLogin()" title="Admin Panel">⚙</button>
-    <a class="nav-cta" href="mailto:umuhozahope5@gmail.com">Hire Me ↗</a>
+    <a class="nav-cta" href="mailto:umuhozahope5@gmail.com">Let's Talk ↗</a>
   </div>
 </nav>
 
-<!-- HERO -->
+
 <section id="hero">
 <div class="hero">
   <div class="hero-left">
-    <div class="hero-top-tag">
-      <div class="pulse-dot"></div>
-      AVAILABLE FOR OPPORTUNITIES
-    </div>
     <h1 class="hero-name">
       IMPANO<br>
       <span class="dim">Umuhoza</span><br>
@@ -486,7 +644,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
 </div>
 </section>
 
-<!-- ABOUT -->
 <div class="section-full">
 <div class="inner">
 <section id="about" class="section" style="padding:80px 0">
@@ -518,7 +675,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
 </div>
 </div>
 
-<!-- SKILLS -->
+
 <section id="skills" class="section-dark">
 <div class="inner">
   <div style="padding:80px 0">
@@ -528,7 +685,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
 
     <div class="skills-universe fade-up" style="transition-delay:.2s" id="skills-universe">
 
-      <!-- FRONTEND -->
+    
       <div class="sk-row">
         <div class="sk-idx">01</div>
         <div class="sk-cat-col"><div class="sk-cat-name">Frontend</div><div class="sk-cat-line"></div></div>
@@ -541,7 +698,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
         </div>
       </div>
 
-      <!-- BACKEND -->
+
       <div class="sk-row">
         <div class="sk-idx">02</div>
         <div class="sk-cat-col"><div class="sk-cat-name">Backend</div><div class="sk-cat-line"></div></div>
@@ -554,7 +711,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
         </div>
       </div>
 
-      <!-- DB & DEVOPS -->
+    
       <div class="sk-row">
         <div class="sk-idx">03</div>
         <div class="sk-cat-col"><div class="sk-cat-name">DB & DevOps</div><div class="sk-cat-line"></div></div>
@@ -567,7 +724,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
         </div>
       </div>
 
-      <!-- IOT & SECURITY -->
+    
       <div class="sk-row">
         <div class="sk-idx">04</div>
         <div class="sk-cat-col"><div class="sk-cat-name">IoT & Security</div><div class="sk-cat-line"></div></div>
@@ -585,140 +742,16 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
 </div>
 </section>
 
-<!-- PROJECTS -->
+
 <section id="projects" class="section" style="padding-top:100px;padding-bottom:100px">
   <div class="eyebrow fade-up"><div class="eyebrow-line"></div>03 · PROJECTS</div>
   <h2 class="sec-title fade-up" style="transition-delay:.08s">Things I've built<br>that actually work.</h2>
   <p class="sec-sub fade-up" style="transition-delay:.14s">Hover any card to flip it and see the full story. Real tools, real problems, real impact.</p>
   <div class="proj-grid" id="proj-grid">
 
-    <!-- CARD 1 — AgriSense (featured) -->
-    <div class="flip-wrap span2">
-      <div class="flip-card">
-        <div class="flip-front">
-          <div class="proj-img">
-            <div class="proj-img-rings">
-              <div class="ring" style="width:80px;height:80px"></div>
-              <div class="ring" style="width:150px;height:150px"></div>
-              <div class="ring" style="width:240px;height:240px"></div>
-              <div class="ring" style="width:350px;height:350px"></div>
-            </div>
-            <div class="proj-img-icon">🌱</div>
-          </div>
-          <div class="proj-front-body">
-            <div class="proj-num">#01 · Featured Project</div>
-            <div class="proj-title">AgriSense</div>
-            <p class="proj-desc-short">IoT-powered crop intelligence for Rwandan farmers — real soil data, real predictions, real impact.</p>
-            <div class="proj-tags">
-              <span class="ptag">React</span>
-              <span class="ptag">IoT Sensors</span>
-              <span class="ptag">Python</span>
-              <span class="ptag">MySQL</span>
-            </div>
-            <div class="flip-hint">
-              <div class="flip-hint-icon">↻</div>
-              Hover to explore
-            </div>
-          </div>
-        </div>
-        <div class="flip-back">
-          <button class="flip-close" onclick="event.stopPropagation();unflip(this)">×</button>
-          <div class="flip-back-num">#01 · FEATURED</div>
-          <div class="flip-back-title">AgriSense</div>
-          <div class="flip-back-role">Analytics Engineer · React · IoT · Python · MySQL</div>
-          <div class="flip-back-section">
-            <div class="flip-bs-label">The Problem</div>
-            <div class="flip-bs-text">Rwandan farmers lose income every season through guesswork — planting wrong crops, over-investing in inputs, with zero data about their own soil. No affordable intelligence tool existed for smallholder farmers.</div>
-          </div>
-          <div class="flip-back-section">
-            <div class="flip-bs-label">How I Solved It</div>
-            <div class="flip-bs-text">Built an IoT pipeline connecting soil sensors to a React dashboard. Conducted on-site farm visits and partnered with FAO to validate the model. Real farmers tested it in the field before launch.</div>
-          </div>
-          <div class="flip-impact-row">
-            <div class="flip-impact-dot"></div>
-            <div class="flip-impact-text">70%+ prediction accuracy on first deployment · FAO validated · Real farmer deployment</div>
-          </div>
-          <div class="flip-back-links">
-            <a class="flip-link" href="https://github.com/Hope664" target="_blank" rel="noopener" onclick="event.stopPropagation()">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              GitHub
-            </a>
-            <a class="flip-link ghost" href="mailto:umuhozahope5@gmail.com" onclick="event.stopPropagation()">Request Demo</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CARD 2 — Business Record System -->
-    <div class="flip-wrap" style="transition-delay:.1s">
-      <div class="flip-card">
-        <div class="flip-front">
-          <div class="proj-front-name-only">
-            <div class="proj-front-num">#02</div>
-            <div class="proj-front-title">Business<br>Record<br>System</div>
-            <div class="proj-front-hint">
-              <div class="proj-front-hint-icon">↻</div>
-              hover to explore
-            </div>
-          </div>
-        </div>
-        <div class="flip-back">
-          <button class="flip-close" onclick="event.stopPropagation();unflip(this)">×</button>
-          <div class="flip-back-num">#02</div>
-          <div class="flip-back-title">Business Record System</div>
-          <div class="flip-back-role">Solo Full-Stack Developer · PHP · MySQL · JavaScript</div>
-          <div class="flip-back-section">
-            <div class="flip-bs-label">The Problem</div>
-            <div class="flip-bs-text">My parents ran their business with paper ledgers — forgotten debts, lost payment records, zero visibility into finances. No digital solution was simple enough for non-technical users.</div>
-          </div>
-          <div class="flip-back-section">
-            <div class="flip-bs-label">How I Solved It</div>
-            <div class="flip-bs-text">Designed and built a clean web app from scratch. Watched my parents use it and iterated on every confusion point until it was intuitive for people who had never used software before.</div>
-          </div>
-          <div class="flip-impact-row">
-            <div class="flip-impact-dot"></div>
-            <div class="flip-impact-text">Eliminated lost records · Used by a real business every day</div>
-          </div>
-          <div class="flip-back-links">
-            <a class="flip-link" href="https://github.com/Hope664" target="_blank" rel="noopener" onclick="event.stopPropagation()">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- DYNAMIC PROJECTS — injected from localStorage via JS -->
-    <div id="dynamic-projects" style="display:contents"></div>
-
-    <!-- CARD LAST — Next Project placeholder (always at the end) -->
-    <div class="flip-wrap" id="next-proj-card" style="transition-delay:.2s">
-      <div class="flip-card">
-        <div class="flip-front">
-          <div class="proj-front-name-only">
-            <div class="proj-front-num">#0?</div>
-            <div class="proj-front-title">Next<br>Project</div>
-            <div class="proj-front-hint">
-              <div class="proj-front-hint-icon">↻</div>
-              hover for a peek
-            </div>
-          </div>
-        </div>
-        <div class="flip-back" style="align-items:center;justify-content:center;text-align:center">
-          <button class="flip-close" onclick="event.stopPropagation();unflip(this)">×</button>
-          <div style="font-size:40px;margin-bottom:16px">🚀</div>
-          <div class="flip-back-title" style="margin-bottom:8px">Something New</div>
-          <div style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.7;max-width:240px;margin-bottom:24px">I'm always building. Check GitHub for my latest work in progress.</div>
-          <a class="flip-link" href="https://github.com/Hope664" target="_blank" rel="noopener" onclick="event.stopPropagation()">github.com/Hope664 ↗</a>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<!-- WHY ME -->
 <section class="section-dark">
 <div class="inner" style="padding:80px 0">
   <div class="eyebrow fade-up" style="color:rgba(255,255,255,.35)"><div class="eyebrow-line" style="background:rgba(255,255,255,.25)"></div>04 · WHY WORK WITH ME</div>
@@ -732,43 +765,91 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
 </div>
 </section>
 
-<!-- EXPERIENCE -->
+
 <div class="section-full">
 <div class="inner">
 <section id="experience" class="section" style="padding:80px 0">
   <div class="eyebrow fade-up"><div class="eyebrow-line"></div>05 · EXPERIENCE</div>
   <h2 class="sec-title fade-up" style="transition-delay:.08s">What I've done<br>so far.</h2>
   <div class="exp-list" id="exp-list">
+
     <div class="exp-item">
       <div class="exp-date">2025 · Ongoing</div>
       <div>
         <div class="exp-role">Analytics Engineer — AgriSense</div>
-        <div class="exp-org">Student Project · Rwanda Coding Academy</div>
-        <div class="exp-detail">Designed and built the data pipeline and crop recommendation engine for AgriSense. Conducted field research with Rwandan farmers, partnered with FAO for validation, and achieved 70%+ prediction accuracy on first deployment.</div>
+        <div class="exp-org">RCA Hackathon 2024/2025 · Rwanda Coding Academy</div>
+        <div class="exp-detail">Built a two-part AI + IoT agricultural platform for smallholder Rwandan farmers. Designed the soil sensor data pipeline, trained the crop recommendation model, and integrated an AI plant disease detection system using image recognition. Conducted on-site farm visits, partnered with FAO for field validation, and achieved 70%+ prediction accuracy on first real-world deployment. Stack: React, Python, MySQL, IoT Sensors, AI/ML.</div>
       </div>
     </div>
+
     <div class="exp-item">
       <div class="exp-date">2025</div>
       <div>
         <div class="exp-role">Solo Full-Stack Developer — Business Record System</div>
         <div class="exp-org">Independent Project</div>
-        <div class="exp-detail">Conceptualised, designed, built, and deployed a complete business management system for a real client (family business). Replaced manual paper ledgers with a clean, digital solution — used daily to track clients, payments, and inventory.</div>
+        <div class="exp-detail">Conceptualised, designed, built, and deployed a complete business management system for a real client (family business). Replaced manual paper ledgers with a clean digital solution used daily to track clients, payments, and inventory. Iterated on UX with non-technical users until zero guidance was needed. Stack: PHP, MySQL, JavaScript.</div>
       </div>
     </div>
+
+    <div class="exp-item">
+      <div class="exp-date">2025</div>
+      <div>
+        <div class="exp-role">Backend Developer — Rwimara AI</div>
+        <div class="exp-org">Independent Project</div>
+        <div class="exp-detail">Built and owned the entire backend of Rwimara AI — a mental wellness mobile app. Engineered the server-side logic powering the AI chat companion, mood journal data persistence, user onboarding flow, and progress tracking system. Responsible for API design, data modelling, and connecting backend services to frontend features including guided mindfulness exercises (Box Breathing, Affirmations, Body Scan), streak tracking, and the Find Support module. Stack: JavaScript, HTML/CSS (backend layer).</div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-date">2025</div>
+      <div>
+        <div class="exp-role">Analytics Engineer — Umurava</div>
+        <div class="exp-org">Project · Rwanda Coding Academy</div>
+        <div class="exp-detail">Served as Analytics Engineer on Umurava — an AI-powered talent screening platform. Designed and built the data layer underpinning candidate scoring and matching: defined the analytics pipeline that produces AI percentage-match ratings, modelled applicant and recruiter data flows, and ensured real-time application stage tracking was accurate and consistent across both portals. Owned the intelligence that made hiring decisions data-driven. Stack: JavaScript, HTML/CSS (analytics & data layer).</div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-date">2025</div>
+      <div>
+        <div class="exp-role">Backend Developer — MosqAI</div>
+        <div class="exp-org">Competition Submission 2025 · Health Technology / AI for Good</div>
+        <div class="exp-detail">Served as Backend Developer on MosqAI — the world's first AI-powered, species-selective mosquito detection and elimination network. Responsible for the cloud platform that receives the real-time event stream from deployed IoT devices, aggregates detection data, updates live heatmap tiles, runs the predictive outbreak risk scoring engine (0–100 Outbreak Risk Index), and triggers escalation alerts to health ministries when thresholds are breached. Also built the data pipeline feeding the authority command dashboard. Stack: Python, IoT data pipelines, cloud backend, REST APIs.</div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-date">2025</div>
+      <div>
+        <div class="exp-role">Developer — SENTINEL AI</div>
+        <div class="exp-org">Competition / Business Plan Project</div>
+        <div class="exp-detail">Worked on SENTINEL AI — an AI-powered global economic early-warning platform that monitors 1,000+ data streams across agriculture, logistics, energy, and geopolitics. The system uses ML anomaly detection, NLP sentiment analysis in 30+ languages, LSTM/Transformer forecasting models, and Graph Neural Networks to predict supply chain disruptions and food crises 3–6 weeks before they surface — 10× faster than traditional systems. Stack: Python, PyTorch, FastAPI, React, Node.js — <em>specific role to be confirmed.</em></div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-date">2025</div>
+      <div>
+        <div class="exp-role">Frontend Developer — Codefolio</div>
+        <div class="exp-org">Project · Rwanda Coding Academy</div>
+        <div class="exp-detail">Served as Frontend Developer on Codefolio — a school project repository and collaboration platform built for Rwanda Coding Academy. Designed and built the entire user-facing interface: the card-based project grid, live stats dashboard, project detail views, team member management UI, status indicators (public / in progress), and the integrated AI assistant chat interface. Responsible for all layout, component design, and user experience decisions. Stack: JavaScript, HTML/CSS.</div>
+      </div>
+    </div>
+
     <div class="exp-item">
       <div class="exp-date">2024 · Present</div>
       <div>
         <div class="exp-role">Student Engineer</div>
         <div class="exp-org">Rwanda Coding Academy · Kigali</div>
-        <div class="exp-detail">Selected through national competitive examination for one of East Africa's most selective tech institutions. Studying Software Programming and Embedded Systems. Curriculum covers full-stack development, IoT, and applied computer science.</div>
+        <div class="exp-detail">Selected through national competitive examination for one of East Africa's most selective tech institutions. Studying Software Programming and Embedded Systems. Curriculum covers full-stack development, IoT, cybersecurity, networking, and applied computer science. Expected graduation 2028.</div>
       </div>
     </div>
+
   </div>
 </section>
 </div>
 </div>
 
-<!-- CONTACT -->
 <section id="contact" class="section-dark">
 <div class="inner" style="padding:80px 0">
   <div class="eyebrow fade-up" style="color:rgba(255,255,255,.35)"><div class="eyebrow-line" style="background:rgba(255,255,255,.25)"></div>06 · CONTACT</div>
@@ -776,7 +857,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
   <p class="sec-sub light fade-up" style="transition-delay:.14s;margin-bottom:48px">Open to freelance projects, internships, competitions, and interesting conversations. I reply within 24 hours.</p>
   <div class="contact-grid fade-up" style="transition-delay:.2s">
 
-    <!-- LEFT: Social links -->
+    
     <div>
       <div style="font-size:12px;color:rgba(255,255,255,.35);font-family:'DM Mono',monospace;letter-spacing:1px;margin-bottom:16px">FIND ME HERE</div>
       <div class="social-links" id="social-links">
@@ -798,18 +879,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
       </div>
     </div>
 
-    <!-- RIGHT: Contact form (powered by Web3Forms) -->
+
     <div style="background:var(--black2);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:28px">
       <div style="font-size:12px;color:rgba(255,255,255,.35);font-family:'DM Mono',monospace;letter-spacing:1px;margin-bottom:20px">SEND A MESSAGE</div>
 
-      <!-- ══════════════════════════════════════
-           SETUP: Go to https://web3forms.com
-           1. Enter your email: umuhozahope5@gmail.com
-           2. Click "Create Access Key" (it's free)
-           3. Copy your access key
-           4. Paste it below where it says YOUR_ACCESS_KEY_HERE
-           After that, every form submission lands in your Gmail inbox.
-           ══════════════════════════════════════ -->
+      
       <form id="contact-form">
         <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE"/>
         <input type="hidden" name="subject" value="New Portfolio Message — IMPANO Hope"/>
@@ -850,18 +924,13 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
   </div>
 </footer>
 
-<!-- ════════════════════════════════════════════
-     FLOATING ADD PROJECT BUTTON (admin only)
-     ════════════════════════════════════════════ -->
 <div id="add-proj-fab">
   <button onclick="openAddProject()">
     <span class="fab-plus">＋</span> Add Project
   </button>
 </div>
 
-<!-- ════════════════════════════════════════════
-     ADMIN LOGIN MODAL
-     ════════════════════════════════════════════ -->
+
 <div class="modal-overlay" id="admin-modal">
   <div class="modal-box" style="max-width:380px">
     <button class="modal-close" onclick="closeAdminLogin()">×</button>
@@ -884,9 +953,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
   </div>
 </div>
 
-<!-- ════════════════════════════════════════════
-     ADD PROJECT MODAL
-     ════════════════════════════════════════════ -->
+
 <div class="modal-overlay" id="add-proj-modal">
   <div class="modal-box" style="max-width:540px;margin:auto">
     <button class="modal-close" onclick="closeAddProject()">×</button>
@@ -934,6 +1001,16 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
       <input id="np-github" type="url" class="modal-input" placeholder="https://github.com/Hope664/..."/>
     </div>
 
+    <div class="modal-field">
+      <label class="modal-label">LIVE WEBSITE / APP URL</label>
+      <input id="np-live" type="url" class="modal-input" placeholder="https://your-project.vercel.app"/>
+    </div>
+
+    <div class="modal-field">
+      <label class="modal-label">FIGMA / DESIGN LINK</label>
+      <input id="np-figma" type="url" class="modal-input" placeholder="https://figma.com/file/..."/>
+    </div>
+
     <div class="modal-btn-row" style="margin-top:8px">
       <button class="modal-btn-primary" onclick="saveProject()">Add to Portfolio</button>
       <button class="modal-btn-secondary" onclick="closeAddProject()">Cancel</button>
@@ -941,10 +1018,72 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--bla
   </div>
 </div>
 
+<div class="modal-overlay" id="edit-proj-modal">
+  <div class="modal-box" style="max-width:540px;margin:auto">
+    <button class="modal-close" onclick="closeEditProject()">×</button>
+    <div class="modal-eyebrow">ADMIN · EDIT PROJECT</div>
+    <div class="modal-title">Edit Project</div>
+
+    <div class="modal-2col" style="margin-bottom:14px">
+      <div class="modal-field" style="margin-bottom:0">
+        <label class="modal-label">PROJECT TITLE *</label>
+        <input id="ep-title" type="text" class="modal-input" placeholder="e.g. Flight Tracker App"/>
+      </div>
+      <div class="modal-field" style="margin-bottom:0">
+        <label class="modal-label">EMOJI</label>
+        <input id="ep-emoji" type="text" class="modal-input" placeholder="💡" maxlength="2" style="text-align:center;font-size:20px"/>
+      </div>
+    </div>
+
+    <div class="modal-field">
+      <label class="modal-label">SHORT DESCRIPTION *</label>
+      <input id="ep-desc" type="text" class="modal-input" placeholder="One line about what it does"/>
+    </div>
+
+    <div class="modal-field">
+      <label class="modal-label">THE PROBLEM</label>
+      <textarea id="ep-problem" class="modal-input modal-textarea" placeholder="What problem did this solve?"></textarea>
+    </div>
+
+    <div class="modal-field">
+      <label class="modal-label">HOW I SOLVED IT</label>
+      <textarea id="ep-solution" class="modal-input modal-textarea" placeholder="How did you build / approach it?"></textarea>
+    </div>
+
+    <div class="modal-field">
+      <label class="modal-label">IMPACT / KEY RESULT</label>
+      <input id="ep-impact" type="text" class="modal-input" placeholder="e.g. Reduced booking time by 60%"/>
+    </div>
+
+    <div class="modal-field">
+      <label class="modal-label">TECH TAGS (comma separated)</label>
+      <input id="ep-tags" type="text" class="modal-input" placeholder="React, Node.js, MySQL"/>
+    </div>
+
+    <div class="modal-field">
+      <label class="modal-label">GITHUB LINK</label>
+      <input id="ep-github" type="url" class="modal-input" placeholder="https://github.com/Hope664/..."/>
+    </div>
+
+    <div class="modal-field">
+      <label class="modal-label">LIVE WEBSITE / APP URL</label>
+      <input id="ep-live" type="url" class="modal-input" placeholder="https://your-project.vercel.app"/>
+    </div>
+
+    <div class="modal-field">
+      <label class="modal-label">FIGMA / DESIGN LINK</label>
+      <input id="ep-figma" type="url" class="modal-input" placeholder="https://figma.com/file/..."/>
+    </div>
+
+    <div class="modal-btn-row" style="margin-top:8px">
+      <button class="modal-btn-primary" onclick="saveEditProject()">Save Changes</button>
+      <button class="modal-btn-secondary" onclick="closeEditProject()">Cancel</button>
+    </div>
+  </div>
+</div>
+
 <script>
-/* ══════════════════════════════════════════════════
-   CUSTOM CURSOR — refined, small, clean
-   ══════════════════════════════════════════════════ */
+
 const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
@@ -961,14 +1100,14 @@ document.querySelectorAll('a,button,.flip-wrap,.sk-tag,.why-item,.social-link').
   });
 });
 
-/* ── SCROLL PROGRESS ── */
+
 const sp=document.getElementById('sprog');
 window.addEventListener('scroll',()=>{
   const pct=window.scrollY/(document.body.scrollHeight-window.innerHeight)*100;
   sp.style.width=Math.min(pct,100)+'%';
 },{passive:true});
 
-/* ── SMOOTH SCROLL ── */
+
 function go(id){
   const el=document.getElementById(id);
   if(!el)return;
@@ -977,7 +1116,7 @@ function go(id){
   window.scrollTo({top,behavior:'smooth'});
 }
 
-/* ── COUNTER ANIMATION ── */
+
 function countUp(el,target,suffix,dur=1400){
   const start=performance.now();
   (function tick(now){
@@ -1001,7 +1140,7 @@ function tryCounters(){
   }
 }
 
-/* ── BUTTON RIPPLE ── */
+
 document.querySelectorAll('.btn-dark,.btn-outline,.nav-cta').forEach(b=>{
   b.addEventListener('click',function(e){
     const r=document.createElement('span');
@@ -1014,7 +1153,7 @@ document.querySelectorAll('.btn-dark,.btn-outline,.nav-cta').forEach(b=>{
   });
 });
 
-/* ── UNFLIP ── */
+
 function unflip(btn){
   const card=btn.closest('.flip-card');
   if(card){
@@ -1023,7 +1162,7 @@ function unflip(btn){
   }
 }
 
-/* ── INTERSECTION OBSERVER ── */
+
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(!e.isIntersecting)return;
@@ -1050,18 +1189,6 @@ document.querySelectorAll('.fade-up,.flip-wrap,#why-grid,#exp-list,#social-links
 window.addEventListener('scroll',tryCounters,{passive:true});
 tryCounters();
 
-/* ══════════════════════════════════════════════════
-   CONTACT FORM — Web3Forms backend
-   ══════════════════════════════════════════════════
-   SETUP (one-time, takes 2 minutes):
-   1. Go to https://web3forms.com (free, no account needed)
-   2. Type your email: umuhozahope5@gmail.com
-   3. Click "Create Access Key"
-   4. Copy the key they give you
-   5. In the HTML above, find: value="YOUR_ACCESS_KEY_HERE"
-   6. Replace YOUR_ACCESS_KEY_HERE with your key
-   7. Done — every message now lands in your Gmail!
-   ══════════════════════════════════════════════════ */
 const contactForm=document.getElementById('contact-form');
 if(contactForm){
   contactForm.addEventListener('submit',async function(e){
@@ -1096,11 +1223,7 @@ if(contactForm){
   });
 }
 
-/* ══════════════════════════════════════════════════
-   ADMIN SYSTEM
-   Change the password below to anything you want!
-   ══════════════════════════════════════════════════ */
-const ADMIN_PASSWORD='hope2025'; // ← CHANGE THIS to your own password
+const ADMIN_PASSWORD='hope2025'; 
 let isAdmin=false;
 
 function openAdminLogin(){
@@ -1120,18 +1243,129 @@ function submitAdminLogin(){
     closeAdminLogin();
     document.getElementById('add-proj-fab').style.display='block';
     document.getElementById('admin-gear-btn').classList.add('active');
-    renderProjects(); // re-render to show delete buttons
+    renderProjects();
   } else {
     document.getElementById('admin-error').style.display='block';
     document.getElementById('admin-pw').select();
   }
 }
 
-/* ══════════════════════════════════════════════════
-   PROJECT MANAGEMENT — add, delete, render
-   Projects are saved in your browser's localStorage.
-   They stay even after you close the tab.
-   ══════════════════════════════════════════════════ */
+const SEED_PROJECTS=[
+  {
+    id:1000,
+    featured:false,
+    title:'AgriSense',
+    emoji:'🌱',
+    desc:'IoT-powered crop intelligence for Rwandan farmers — real soil data, AI recommendations, real impact.',
+    problem:'67% of smallholder farmers in Rwanda experience reduced productivity due to lack of data. They rely on guesswork for crop selection, overuse fertilizers, miss early disease warnings, and cannot afford expensive lab soil testing. No affordable, real-time intelligence tool existed for them.',
+    solution:'Built a two-part system: (1) a smart IoT soil sensor that reads pH, moisture, and mineral levels in real time, feeding crop and fertilizer recommendations; (2) an AI image-recognition tool where farmers upload plant photos to detect disease and pests early. Data flows into a mobile-first React dashboard. Conducted on-site farm visits, partnered with FAO to validate the model, and ran pilot programs with real farmers before launch.',
+    impact:'70%+ prediction accuracy on first deployment · FAO validated · Potential yield improvement up to 96.9% · RCA Hackathon 2024/2025',
+    tags:['React','IoT Sensors','Python','MySQL','AI / ML','Mobile-First'],
+    github:'https://github.com/Hope664',
+    live:'',
+    figma:'https://www.figma.com/design/CM2ZnHsSA7LYjWzJVKpu37/Untitled?node-id=67-2753&t=2iFTaCcbOYEKOL3s-1'
+  },
+  {
+    id:1002,
+    featured:false,
+    title:'Rwimara AI',
+    emoji:'🧠',
+    desc:'A mental wellness mobile app — AI companion, mood journal, guided practices, and progress tracking. Your mind deserves a quiet place.',
+    problem:'Many students and young people struggle with stress and mental health but have no affordable, private, always-available support. Traditional therapy is expensive, stigmatized, and not accessible on demand.',
+    solution:'Built a mobile-first wellness app with five core features: an AI chat companion (Rwimara) that listens without judgment 24/7; a daily mood journal to track emotional patterns; guided mindfulness exercises including Box Breathing, Affirmations, and Body Scan; a progress dashboard showing streaks and trends; and a Find Support section with professional resources. A personalised onboarding flow collects name, language, and current mood.',
+    impact:'Full working app · AI-powered personalised wellness support · Accessible to anyone with a smartphone',
+    tags:['Node.js','JavaScript','API Design','AI Integration','Backend'],
+    github:'https://github.com/Hope664',
+    live:'',
+    figma:''
+  },
+  {
+    id:1006,
+    featured:false,
+    title:'Codefolio',
+    emoji:'🗂️',
+    desc:'A school project repository and collaboration hub — upload, describe, and share project architecture with an integrated AI assistant.',
+    problem:'Students at coding schools have no central, structured place to store, document, and showcase their school projects. Projects live in scattered folders and GitHub repos with no context, no discoverability, and no intelligent way to query or compare them.',
+    solution:'Built a full project management platform where students can log in, add project nodes with name, description, and tech stack, track status (public / in progress), and view team members. Includes a system overview dashboard with live stats, an AI assistant that can answer questions about your projects, and a clean card-based project grid. Designed to work as a school-wide shared repository.',
+    impact:'Full working platform · AI-assisted project querying · Clean team & status management · Built for real use at Rwanda Coding Academy',
+    tags:['JavaScript','HTML / CSS','UI Design','Dashboard','Frontend'],
+    github:'https://github.com/Hope664',
+    live:'',
+    figma:''
+  },
+  {
+    id:1003,
+    featured:false,
+    title:'Umurava',
+    emoji:'🎯',
+    desc:'"Hire smarter. Build faster." — An AI-powered talent screening platform with dual portals for recruiters and applicants.',
+    problem:'Recruiters manually sift through hundreds of CVs, miss strong candidates, and give applicants zero visibility into where they stand. The hiring process is slow, biased, and frustrating on both sides.',
+    solution:'Built a full hiring platform with two roles: a Recruiter Portal to post jobs, screen applicants from the Umurava talent pool or external uploads, view AI match scores, and schedule interviews; and an Applicant Portal to browse listings, track application stages in real time, and receive interview notifications. AI scoring surfaces best-matched candidates automatically with percentage match ratings.',
+    impact:'End-to-end hiring platform · AI candidate matching · Real-time application tracking · Dual-role auth system',
+    tags:['Analytics','AI Matching','Data Pipelines','JavaScript','Full-Stack'],
+    github:'https://github.com/Hope664',
+    live:'',
+    figma:''
+  },
+  {
+    id:1004,
+    featured:false,
+    title:'MosqAI',
+    emoji:'🦟',
+    desc:'The world\'s first AI-powered, species-selective mosquito detection and elimination network — IoT hardware + citizen app + government outbreak dashboard.',
+    problem:'Mosquitoes kill 700,000+ people yearly, yet our response has barely evolved: spray chemicals blindly, hang nets, and hope. Existing traps cannot tell a harmless Culex from a malaria-carrying Anopheles gambiae. Chemical spraying destroys bee and butterfly populations. Health ministries make decisions on outdated reports, not live intelligence. There is no predictive system — only reaction after outbreaks have already started.',
+    solution:'Built a three-layer system: (1) a compact smart IoT device with acoustic MEMS sensors that captures mosquito wingbeat frequency (200–800 Hz), uses on-device TinyML to classify species at 93%+ accuracy in under 120ms, and triggers selective elimination only for disease carriers while ignoring beneficial insects; (2) a citizen mobile app delivering real-time proximity alerts, local risk levels, and community reporting; (3) a government command dashboard with live heatmaps, AI outbreak risk scoring (0–100 index), and predictive spike forecasting 7–14 days in advance using rainfall, temperature, humidity, and satellite data.',
+    impact:'93%+ species classification accuracy · Estimated 30–60% reduction in outbreak case counts · Protects pollinators · Zero chemical use · SDG 3, 13 & 15 aligned · Competition submission 2025',
+    tags:['TinyML','IoT Hardware','Python','React','Edge AI','Mobile App','Public Health'],
+    github:'https://github.com/Hope664',
+    live:'',
+    figma:''
+  },
+  {
+    id:1005,
+    featured:false,
+    title:'SENTINEL AI',
+    emoji:'🛰️',
+    desc:'"Predict the Market. Protect the People." — An AI early-warning platform that detects economic crises weeks before they surface.',
+    problem:'Every major crisis of the past two decades — 2008 financial collapse, 2020 supply chain meltdown, 2022 food price shocks — had visible warning signs that nobody was watching. Agriculture data, shipping indexes, energy prices, and political news are never analysed together. Current monitoring systems take days to flag anomalies that form in hours. The result: $1.5 trillion lost annually to supply chain disruptions and 345 million people at risk of food insecurity.',
+    solution:'Built a layered AI monitoring platform that watches 1,000+ global data streams across agriculture, logistics, energy, and geopolitics simultaneously. The AI stack includes: ML anomaly detection to flag statistical deviations before they hit prices; NLP sentiment analysis reading news and policy documents in 30+ languages; LSTM and Transformer models forecasting commodity prices and supply shocks 2–8 weeks ahead; Graph Neural Networks mapping cascade failure risks across supply chain nodes. Outputs: sector dashboards for governments and businesses, and citizen-facing push notifications for food and fuel pricing shifts.',
+    impact:'80%+ backtested prediction accuracy · 3–6 weeks advance warning on tracked disruptions · 10× faster crisis detection vs. traditional systems · Targets 50M+ citizens in food-insecure regions',
+    tags:['Python','PyTorch','FastAPI','React','NLP','Time-Series AI','Node.js'],
+    github:'https://github.com/Hope664',
+    live:'',
+    figma:''
+  },
+  {
+    id:1001,
+    featured:false,
+    title:'Business Record System',
+    emoji:'📊',
+    desc:'A full digital business management system built for real daily use — by a real business.',
+    problem:'My parents ran their business with paper ledgers — forgotten debts, lost payment records, zero visibility into finances. No digital solution was simple enough for non-technical users.',
+    solution:'Designed and built a clean web app from scratch. Watched my parents use it and iterated on every confusion point until it was intuitive for people who had never used software before.',
+    impact:'Eliminated lost records · Used by a real business every day',
+    tags:['PHP','MySQL','JavaScript'],
+    github:'https://github.com/Hope664',
+    live:'',
+    figma:''
+  }
+];
+
+function seedProjects(){
+  if(localStorage.getItem('hope_seeded_v6'))return;
+  localStorage.setItem('hope_projects',JSON.stringify(SEED_PROJECTS));
+  localStorage.setItem('hope_seeded_v6','1');
+}
+
+function getProjects(){
+  try{ return JSON.parse(localStorage.getItem('hope_projects')||'[]'); }
+  catch(e){ return []; }
+}
+function saveAll(projects){
+  localStorage.setItem('hope_projects',JSON.stringify(projects));
+}
+
+
 function openAddProject(){
   document.getElementById('add-proj-modal').classList.add('open');
   ['np-title','np-emoji','np-desc','np-problem','np-solution','np-impact','np-tags','np-github']
@@ -1142,110 +1376,217 @@ function openAddProject(){
 function closeAddProject(){
   document.getElementById('add-proj-modal').classList.remove('open');
 }
-
 function saveProject(){
   const title=document.getElementById('np-title').value.trim();
   const desc=document.getElementById('np-desc').value.trim();
-  if(!title||!desc){
-    alert('Please fill in at least the Title and Description fields.');
-    return;
-  }
+  if(!title||!desc){ alert('Please fill in at least the Title and Description.'); return; }
   const emoji=document.getElementById('np-emoji').value.trim()||'💡';
   const problem=document.getElementById('np-problem').value.trim();
   const solution=document.getElementById('np-solution').value.trim();
   const impact=document.getElementById('np-impact').value.trim();
   const tags=document.getElementById('np-tags').value.split(',').map(t=>t.trim()).filter(Boolean);
   const github=document.getElementById('np-github').value.trim();
-
+  const live=document.getElementById('np-live').value.trim();
+  const figma=document.getElementById('np-figma').value.trim();
   const projects=getProjects();
-  projects.push({id:Date.now(),title,emoji,desc,problem,solution,impact,tags,github});
-  localStorage.setItem('hope_projects',JSON.stringify(projects));
+  projects.push({id:Date.now(),featured:false,title,emoji,desc,problem,solution,impact,tags,github,live,figma});
+  saveAll(projects);
   closeAddProject();
+  renderProjects();
+}
+
+
+let editingId=null;
+function openEditProject(id){
+  const p=getProjects().find(x=>x.id===id);
+  if(!p)return;
+  editingId=id;
+  document.getElementById('ep-title').value=p.title||'';
+  document.getElementById('ep-emoji').value=p.emoji||'💡';
+  document.getElementById('ep-desc').value=p.desc||'';
+  document.getElementById('ep-problem').value=p.problem||'';
+  document.getElementById('ep-solution').value=p.solution||'';
+  document.getElementById('ep-impact').value=p.impact||'';
+  document.getElementById('ep-tags').value=(p.tags||[]).join(', ');
+  document.getElementById('ep-github').value=p.github||'';
+  document.getElementById('ep-live').value=p.live||'';
+  document.getElementById('ep-figma').value=p.figma||'';
+  document.getElementById('edit-proj-modal').classList.add('open');
+  setTimeout(()=>document.getElementById('ep-title').focus(),100);
+}
+function closeEditProject(){
+  document.getElementById('edit-proj-modal').classList.remove('open');
+  editingId=null;
+}
+function saveEditProject(){
+  const title=document.getElementById('ep-title').value.trim();
+  const desc=document.getElementById('ep-desc').value.trim();
+  if(!title||!desc){ alert('Please fill in at least the Title and Description.'); return; }
+  const projects=getProjects();
+  const idx=projects.findIndex(x=>x.id===editingId);
+  if(idx===-1){ closeEditProject(); return; }
+
+  projects[idx]={
+    ...projects[idx],
+    title,
+    emoji:document.getElementById('ep-emoji').value.trim()||'💡',
+    desc,
+    problem:document.getElementById('ep-problem').value.trim(),
+    solution:document.getElementById('ep-solution').value.trim(),
+    impact:document.getElementById('ep-impact').value.trim(),
+    tags:document.getElementById('ep-tags').value.split(',').map(t=>t.trim()).filter(Boolean),
+    github:document.getElementById('ep-github').value.trim(),
+    live:document.getElementById('ep-live').value.trim(),
+    figma:document.getElementById('ep-figma').value.trim()
+  };
+  saveAll(projects);
+  closeEditProject();
   renderProjects();
 }
 
 function deleteProject(id){
   if(!confirm('Delete this project from your portfolio?'))return;
-  const updated=getProjects().filter(p=>p.id!==id);
-  localStorage.setItem('hope_projects',JSON.stringify(updated));
+  saveAll(getProjects().filter(p=>p.id!==id));
   renderProjects();
 }
 
-function getProjects(){
-  try{ return JSON.parse(localStorage.getItem('hope_projects')||'[]'); }
-  catch(e){ return []; }
-}
-
-function getProjectNumber(index){
-  // Dynamic projects start at #03 (after the 2 hardcoded ones)
-  return String(index+3).padStart(2,'0');
-}
-
 function renderProjects(){
-  const container=document.getElementById('dynamic-projects');
+  const grid=document.getElementById('proj-grid');
   const projects=getProjects();
-  container.innerHTML='';
-
-  // Update the "Next Project" card number
-  const nextCard=document.getElementById('next-proj-card');
-  if(nextCard){
-    const numEl=nextCard.querySelector('.proj-front-num');
-    if(numEl) numEl.textContent='#'+String(projects.length+3).padStart(2,'0');
-  }
+  grid.innerHTML='';
 
   projects.forEach((p,i)=>{
-    const num=getProjectNumber(i);
+    const num=String(i+1).padStart(2,'0');
+    const isFeatured=!!p.featured;
+
+    const adminBtns=isAdmin ? `
+      <div class="proj-admin-btns">
+        <button class="proj-edit-btn" onclick="event.stopPropagation();openEditProject(${p.id})" title="Edit project">✏</button>
+        <button class="proj-delete-btn" onclick="event.stopPropagation();deleteProject(${p.id})" title="Delete project">×</button>
+      </div>` : '';
+
+    const techLine=(p.tags&&p.tags.length)?p.tags.join(' · '):'';
+    const problemSection=p.problem?`<div class="flip-back-section"><div class="flip-bs-label">The Problem</div><div class="flip-bs-text">${escHtml(p.problem)}</div></div>`:'';
+    const solutionSection=p.solution?`<div class="flip-back-section"><div class="flip-bs-label">How I Solved It</div><div class="flip-bs-text">${escHtml(p.solution)}</div></div>`:'';
+    const impactRow=p.impact?`<div class="flip-impact-row"><div class="flip-impact-dot"></div><div class="flip-impact-text">${escHtml(p.impact)}</div></div>`:'';
+    const githubBtn=p.github?`<a class="flip-link" href="${escHtml(p.github)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+      GitHub</a>`:'';
+    const liveBtn=p.live?`<a class="flip-link live" href="${escHtml(p.live)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">↗ Live Site</a>`:'';
+    const figmaBtn=p.figma?`<a class="flip-link figma" href="${escHtml(p.figma)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+      <svg width="12" height="12" viewBox="0 0 38 57" fill="currentColor"><path d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z"/><path d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 0 1-19 0z"/><path d="M19 0v19h9.5a9.5 9.5 0 0 0 0-19H19z"/><path d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z"/><path d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"/></svg>
+      Design</a>`:'';
+    const linksRow=(githubBtn||liveBtn||figmaBtn)?`<div class="flip-back-links">${liveBtn}${githubBtn}${figmaBtn}</div>`:'';
+
     const wrap=document.createElement('div');
-    wrap.className='flip-wrap visible';
+    wrap.className='flip-wrap'+(isFeatured?' span2':'');
     wrap.style.transitionDelay=(i*0.05)+'s';
 
-    const deleteBtn=isAdmin
-      ? `<button class="proj-delete-btn" onclick="event.stopPropagation();deleteProject(${p.id})" title="Delete project">×</button>`
-      : '';
-
-    const techLine=p.tags.length ? p.tags.join(' · ') : '';
-    const problemSection=p.problem ? `<div class="flip-back-section"><div class="flip-bs-label">The Problem</div><div class="flip-bs-text">${escHtml(p.problem)}</div></div>` : '';
-    const solutionSection=p.solution ? `<div class="flip-back-section"><div class="flip-bs-label">How I Solved It</div><div class="flip-bs-text">${escHtml(p.solution)}</div></div>` : '';
-    const impactRow=p.impact ? `<div class="flip-impact-row"><div class="flip-impact-dot"></div><div class="flip-impact-text">${escHtml(p.impact)}</div></div>` : '';
-    const githubLink=p.github ? `<div class="flip-back-links"><a class="flip-link" href="${escHtml(p.github)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">View on GitHub ↗</a></div>` : '';
-
-    wrap.innerHTML=`
-      <div class="flip-card">
-        <div class="flip-front">
-          <div class="proj-front-name-only">
-            <div class="proj-front-num">#${num}</div>
-            <div class="proj-front-title" style="font-size:clamp(22px,3vw,32px)">${escHtml(p.title)}</div>
-            <div style="font-size:13px;color:var(--gray3);margin-top:6px;padding:0 16px;line-height:1.5">${escHtml(p.desc)}</div>
-            <div class="proj-front-hint" style="margin-top:12px">
-              <div class="proj-front-hint-icon">${p.emoji}</div>
-              hover to explore
+    if(isFeatured){
+      
+      wrap.innerHTML=`
+        <div class="flip-card">
+          <div class="flip-front">
+            <div class="proj-img">
+              <div class="proj-img-rings">
+                <div class="ring" style="width:80px;height:80px"></div>
+                <div class="ring" style="width:150px;height:150px"></div>
+                <div class="ring" style="width:240px;height:240px"></div>
+                <div class="ring" style="width:350px;height:350px"></div>
+              </div>
+              <div class="proj-img-icon">${p.emoji}</div>
+            </div>
+            <div class="proj-front-body">
+              <div class="proj-num">#${num} · Featured Project</div>
+              <div class="proj-title">${escHtml(p.title)}</div>
+              <p class="proj-desc-short">${escHtml(p.desc)}</p>
+              <div class="proj-tags">${(p.tags||[]).map(t=>`<span class="ptag">${escHtml(t)}</span>`).join('')}</div>
+              <div class="flip-hint"><div class="flip-hint-icon">↻</div>Hover to explore</div>
             </div>
           </div>
-        </div>
-        <div class="flip-back">
-          <button class="flip-close" onclick="event.stopPropagation();unflip(this)">×</button>
-          ${deleteBtn}
-          <div class="flip-back-num">#${num}</div>
-          <div class="flip-back-title">${escHtml(p.title)}</div>
-          ${techLine ? `<div class="flip-back-role">${escHtml(techLine)}</div>` : ''}
-          ${problemSection}
-          ${solutionSection}
-          ${impactRow}
-          ${githubLink}
-        </div>
-      </div>
-    `;
-    container.appendChild(wrap);
+          <div class="flip-back" onclick="openProjPage(${p.id})" style="cursor:pointer">
+            <button class="flip-close" onclick="event.stopPropagation();unflip(this)">×</button>
+            ${adminBtns}
+            <div class="flip-back-num">#${num} · FEATURED</div>
+            <div class="flip-back-title">${escHtml(p.title)}</div>
+            ${techLine?`<div class="flip-back-role">${escHtml(techLine)}</div>`:''}
+            ${problemSection}${solutionSection}${impactRow}
+            <div class="flip-back-links">
+              ${liveBtn}${githubBtn}
+              ${figmaBtn||`<a class="flip-link figma" href="mailto:umuhozahope5@gmail.com" onclick="event.stopPropagation()">Request Demo</a>`}
+            </div>
+            <div style="position:absolute;bottom:16px;right:52px;font-size:10px;color:rgba(255,255,255,.3);font-family:'DM Mono',monospace;letter-spacing:1px;pointer-events:none">CLICK TO EXPAND ↗</div>
+          </div>
+        </div>`;
+    } else {
+      
+      wrap.innerHTML=`
+        <div class="flip-card">
+          <div class="flip-front">
+            <div class="proj-front-name-only">
+              <div class="proj-front-num">#${num}</div>
+              <div class="proj-front-title" style="font-size:clamp(20px,3vw,34px);line-height:1.05">${escHtml(p.title)}</div>
+              <div style="font-size:13px;color:var(--gray3);margin-top:8px;padding:0 16px;line-height:1.5;text-align:center">${escHtml(p.desc)}</div>
+              <div class="proj-front-hint" style="margin-top:12px">
+                <div class="proj-front-hint-icon">${p.emoji}</div>
+                hover to explore
+              </div>
+            </div>
+          </div>
+          <div class="flip-back" onclick="openProjPage(${p.id})" style="cursor:pointer">
+            <button class="flip-close" onclick="event.stopPropagation();unflip(this)">×</button>
+            ${adminBtns}
+            <div class="flip-back-num">#${num}</div>
+            <div class="flip-back-title">${escHtml(p.title)}</div>
+            ${techLine?`<div class="flip-back-role">${escHtml(techLine)}</div>`:''}
+            ${problemSection}${solutionSection}${impactRow}
+            ${linksRow}
+            <div style="position:absolute;bottom:16px;right:16px;font-size:10px;color:rgba(255,255,255,.3);font-family:'DM Mono',monospace;letter-spacing:1px;pointer-events:none">CLICK TO EXPAND ↗</div>
+          </div>
+        </div>`;
+    }
 
-    // Attach cursor listeners to new elements
+    grid.appendChild(wrap);
+
+    
+    obs.observe(wrap);
+
+    
     wrap.querySelectorAll('a,button').forEach(el=>{
       el.addEventListener('mouseenter',()=>{cur.style.transform='translate(-50%,-50%) scale(1.8)';ring.style.opacity='0'});
       el.addEventListener('mouseleave',()=>{cur.style.transform='translate(-50%,-50%) scale(1)';ring.style.opacity='1'});
     });
   });
+
+  const nextNum=String(projects.length+1).padStart(2,'0');
+  const placeholder=document.createElement('div');
+  placeholder.className='flip-wrap';
+  placeholder.id='next-proj-card';
+  placeholder.innerHTML=`
+    <div class="flip-card">
+      <div class="flip-front">
+        <div class="proj-front-name-only">
+          <div class="proj-front-num">#${nextNum}</div>
+          <div class="proj-front-title">Next<br>Project</div>
+          <div class="proj-front-hint">
+            <div class="proj-front-hint-icon">↻</div>
+            hover for a peek
+          </div>
+        </div>
+      </div>
+      <div class="flip-back" style="align-items:center;justify-content:center;text-align:center">
+        <button class="flip-close" onclick="event.stopPropagation();unflip(this)">×</button>
+        <div style="font-size:40px;margin-bottom:16px">🚀</div>
+        <div class="flip-back-title" style="margin-bottom:8px">Something New</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.7;max-width:240px;margin-bottom:24px">I'm always building. Check GitHub for my latest work in progress.</div>
+        <a class="flip-link" href="https://github.com/Hope664" target="_blank" rel="noopener" onclick="event.stopPropagation()">github.com/Hope664 ↗</a>
+      </div>
+    </div>`;
+  grid.appendChild(placeholder);
+  obs.observe(placeholder);
 }
 
-/* Simple HTML escape to prevent XSS in user-entered content */
+
 function escHtml(str){
   return String(str)
     .replace(/&/g,'&amp;')
@@ -1254,16 +1595,125 @@ function escHtml(str){
     .replace(/"/g,'&quot;');
 }
 
-/* Close modals when clicking the backdrop */
-document.getElementById('admin-modal').addEventListener('click',function(e){
-  if(e.target===this)closeAdminLogin();
-});
-document.getElementById('add-proj-modal').addEventListener('click',function(e){
-  if(e.target===this)closeAddProject();
-});
 
-/* Run on load — render any saved projects */
-renderProjects();
+document.getElementById('admin-modal').addEventListener('click',function(e){ if(e.target===this)closeAdminLogin(); });
+document.getElementById('add-proj-modal').addEventListener('click',function(e){ if(e.target===this)closeAddProject(); });
+document.getElementById('edit-proj-modal').addEventListener('click',function(e){ if(e.target===this)closeEditProject(); });
+
+
+seedProjects();  
+renderProjects(); 
+
+
+function openProjPage(id){
+  const p=getProjects().find(x=>x.id===id);
+  if(!p)return;
+
+  const num=String(getProjects().indexOf(p)+1).padStart(2,'0');
+  const techLine=(p.tags&&p.tags.length)?p.tags.join(' · '):'';
+
+  const githubBtn=p.github?`<a class="pp-link white" href="${escHtml(p.github)}" target="_blank" rel="noopener">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+    View on GitHub</a>`:'';
+  const liveBtn=p.live?`<a class="pp-link green" href="${escHtml(p.live)}" target="_blank" rel="noopener">↗ Live Site</a>`:'';
+  const figmaBtn=p.figma?`<a class="pp-link ghost" href="${escHtml(p.figma)}" target="_blank" rel="noopener">
+    <svg width="12" height="12" viewBox="0 0 38 57" fill="currentColor"><path d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z"/><path d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 0 1-19 0z"/><path d="M19 0v19h9.5a9.5 9.5 0 0 0 0-19H19z"/><path d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z"/><path d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"/></svg>
+    View Design</a>`:'';
+
+  const problemCard=p.problem?`
+    <div class="pp-card">
+      <div class="pp-card-label">The Problem</div>
+      <div class="pp-card-text">${escHtml(p.problem)}</div>
+    </div>`:'';
+
+  const solutionCard=p.solution?`
+    <div class="pp-card dark">
+      <div class="pp-card-label">How I Solved It</div>
+      <div class="pp-card-text">${escHtml(p.solution)}</div>
+    </div>`:'';
+
+  const impactCard=p.impact?`
+    <div class="pp-impact-box">
+      <div class="pp-impact-icon">✦</div>
+      <div>
+        <div class="pp-impact-label">Impact & Key Results</div>
+        <div class="pp-impact-text">${escHtml(p.impact)}</div>
+      </div>
+    </div>`:'';
+
+  const contactCta=`
+    <div class="pp-card full" style="text-align:center;padding:48px 32px;background:var(--black);border-color:var(--black);">
+      <div style="font-size:32px;margin-bottom:16px">${p.emoji}</div>
+      <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:900;color:var(--white);margin-bottom:10px;">Interested in this project?</div>
+      <div style="font-size:14px;color:rgba(255,255,255,.5);margin-bottom:24px;line-height:1.7;">I'm happy to walk you through the details, share the codebase,<br>or discuss how it could apply to your work.</div>
+      <a class="pp-link white" href="mailto:umuhozahope5@gmail.com" style="display:inline-flex;margin:0 auto;">Get in touch →</a>
+    </div>`;
+
+  document.getElementById('pp-nav-title').textContent=p.title.toUpperCase();
+  document.getElementById('pp-content').innerHTML=`
+    <div class="pp-hero">
+      <div class="pp-hero-rings">
+        <div class="pp-hero-ring" style="width:300px;height:300px"></div>
+        <div class="pp-hero-ring" style="width:500px;height:500px"></div>
+        <div class="pp-hero-ring" style="width:700px;height:700px"></div>
+      </div>
+      <div class="pp-hero-inner">
+        <div class="pp-num">#${num} · PROJECT</div>
+        <div class="pp-hero-title">${escHtml(p.title)}</div>
+        <div class="pp-hero-desc">${escHtml(p.desc)}</div>
+        ${p.tags&&p.tags.length?`<div class="pp-tag-row">${p.tags.map(t=>`<span class="pp-tag">${escHtml(t)}</span>`).join('')}</div>`:''}
+        <div class="pp-link-row">${liveBtn}${githubBtn}${figmaBtn}</div>
+      </div>
+    </div>
+    <div class="pp-body">
+      <div class="pp-grid">
+        ${problemCard}
+        ${solutionCard}
+        ${impactCard}
+        ${contactCta}
+      </div>
+    </div>`;
+
+  const overlay=document.getElementById('proj-page-overlay');
+  overlay.scrollTop=0;
+  overlay.style.display='block';
+  document.body.style.overflow='hidden';
+  
+  requestAnimationFrame(()=>{
+    overlay.classList.add('open');
+    requestAnimationFrame(()=>overlay.classList.add('sliding'));
+  });
+}
+
+function closeProjPage(){
+  const overlay=document.getElementById('proj-page-overlay');
+  overlay.classList.remove('sliding');
+  document.body.style.overflow='';
+  setTimeout(()=>{
+    overlay.classList.remove('open');
+    overlay.style.display='none';
+  },560);
+}
+
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    const overlay=document.getElementById('proj-page-overlay');
+    if(overlay.classList.contains('open'))closeProjPage();
+  }
+});
 </script>
+
+<div id="proj-page-overlay">
+  <nav class="pp-nav">
+    <button class="pp-back" onclick="closeProjPage()">
+      <div class="pp-back-arrow">←</div>
+      Back to Projects
+    </button>
+    <div class="pp-title-small" id="pp-nav-title"></div>
+  </nav>
+  <div id="pp-content"></div>
+</div>
+
 </body>
 </html>
